@@ -6,6 +6,19 @@ import type { EventItem } from "@/lib/events";
  */
 export const events: EventItem[] = [
   {
+    label: "Free Teachers' Training",
+    title: "Creating Inclusive Classrooms",
+    startsAt: "2026-10-17T16:00:00+01:00",
+    endsAt: "2026-10-17T18:00:00+01:00",
+    date: "Saturday, October 17, 2026",
+    time: "4:00 PM WAT",
+    venue: "Zoom",
+    description:
+      "A free teachers' training equipping educators and caregivers with practical ways to support different learners in the classroom.",
+    cta: "Register",
+    link: "https://luma.com/0q687e5v",
+  },
+  {
     label: "Workshop",
     title: "AI for Accessibility: Building Inclusive Solutions for the Future",
     startsAt: "2026-08-07T18:00:00+01:00",

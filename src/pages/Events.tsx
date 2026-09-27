@@ -86,10 +86,12 @@ const PastDivider = () => (
 interface EventsProps {
   /** Overrides the current time. Used by tests; the page defaults to now. */
   now?: Date;
+  /** Overrides the event list. Used by tests; the page defaults to the shared data. */
+  events?: EventItem[];
 }
 
-const Events = ({ now }: EventsProps = {}) => {
-  const { upcoming, past } = partitionEvents(allEvents, now);
+const Events = ({ now, events = allEvents }: EventsProps = {}) => {
+  const { upcoming, past } = partitionEvents(events, now);
 
   return (
     <main className="pt-24">

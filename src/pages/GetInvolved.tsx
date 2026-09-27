@@ -17,12 +17,6 @@ const involvements = [
     external: true,
   },
   {
-    title: "The Daughter of Ellen Access Fund",
-    desc: "Established through the generous support of The Eyvonne Anthony Brand, the Daughter of Ellen Access Fund is a community investment initiative expanding access to essential services and support for neurodivergent individuals, persons with disabilities, and their families. Learn more about eligibility, supported services, and how to apply through our designated funding cycles.",
-    cta: "Learn About the Access Fund",
-    link: "/access-fund",
-  },
-  {
     title: "Join the Community Network",
     desc: "The Daughter of Ellen Community Network is a structured membership body for parents, educators, professionals, and advocates committed to neurodivergence inclusion. Members receive access to peer networks, resources, event invitations, and a voice in shaping our advocacy agenda.",
     cta: "Join the Network",

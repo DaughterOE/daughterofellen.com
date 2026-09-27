@@ -19,7 +19,6 @@ import AbujaDeclaration from "./pages/AbujaDeclaration";
 import WhoShouldAttend from "./pages/WhoShouldAttend";
 import Founder from "./pages/Founder";
 import GetInvolved from "./pages/GetInvolved";
-import AccessFund from "./pages/AccessFund";
 import Partner from "./pages/Partner";
 import Community from "./pages/Community";
 import Contact from "./pages/Contact";
@@ -56,7 +55,6 @@ const App = () => (
           <Route path="/who-should-attend" element={<WhoShouldAttend />} />
           <Route path="/founder" element={<Founder />} />
           <Route path="/get-involved" element={<GetInvolved />} />
-          <Route path="/access-fund" element={<AccessFund />} />
           <Route path="/partner" element={<Partner />} />
           <Route path="/community" element={<Community />} />
           <Route path="/contact" element={<Contact />} />
