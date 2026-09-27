@@ -45,12 +45,6 @@ const HeroSection = () => (
           >
             Join the Movement
           </Link>
-          <Link
-            to="/access-fund"
-            className="rounded-full border-2 border-primary-foreground/40 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition-all duration-300 hover:border-primary-foreground hover:bg-primary-foreground/10"
-          >
-            Apply for DOE Access Fund
-          </Link>
         </div>
       </ScrollReveal>
 

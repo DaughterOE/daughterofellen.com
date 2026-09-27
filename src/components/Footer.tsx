@@ -8,7 +8,6 @@ const footerLinks = [
   { label: "Vision", path: "/vision" },
   { label: "Our Pillars", path: "/pillars" },
   { label: "Tende by DOE", path: "/tende" },
-  { label: "Access Fund", path: "/access-fund" },
   { label: "Projects", path: "/projects" },
   { label: "Abuja Declaration", path: "/abuja-declaration" },
   { label: "Our Founder", path: "/founder" },

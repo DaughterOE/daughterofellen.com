@@ -7,7 +7,6 @@ const navLinks = [
   { label: "Home", path: "/" },
   { label: "About Us", path: "/about" },
   { label: "Tende by DOE", path: "/tende" },
-  { label: "Access Fund", path: "/access-fund" },
   { label: "Projects", path: "/projects" },
   { label: "Events", path: "/events" },
   { label: "Media", path: "/media" },
