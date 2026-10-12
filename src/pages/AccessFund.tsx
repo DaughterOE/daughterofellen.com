@@ -1,5 +1,5 @@
 import ScrollReveal from "@/components/ScrollReveal";
-import accessFundImg from "@/assets/access-fund-announcement.jpeg.asset.json";
+import accessFundImg from "@/assets/access-fund-announcement.jpeg";
 
 const WHATSAPP_URL = "https://chat.whatsapp.com/GsfURXWU8fK6EnWHG8x2CW";
 
@@ -36,7 +36,7 @@ const AccessFund = () => (
         </ScrollReveal>
         <ScrollReveal delay={200}>
           <img
-            src={accessFundImg.url}
+            src={accessFundImg}
             alt="Daughter of Ellen Access Fund announcement"
             className="w-full rounded-xl border border-border shadow-lg"
           />

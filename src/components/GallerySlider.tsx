@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 
-type Img = { url: string };
+type Img = string;
 
 interface GallerySliderProps {
   images: Img[];
@@ -40,7 +40,7 @@ const GallerySlider = ({ images, alt }: GallerySliderProps) => {
                 className="block aspect-[3/2] w-full overflow-hidden rounded-lg bg-muted"
               >
                 <img
-                  src={img.url}
+                  src={img}
                   alt={`${alt} — photo ${i + 1}`}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
@@ -68,7 +68,7 @@ const GallerySlider = ({ images, alt }: GallerySliderProps) => {
                 {images.map((img, i) => (
                   <CarouselItem key={i}>
                     <img
-                      src={img.url}
+                      src={img}
                       alt={`${alt} — photo ${i + 1}`}
                       className="mx-auto max-h-[85vh] w-auto rounded-lg object-contain"
                     />

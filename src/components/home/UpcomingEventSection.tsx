@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Calendar, Clock, Globe } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
-import flyer from "@/assets/inclusive-classrooms-flyer.jpeg.asset.json";
+import flyer from "@/assets/inclusive-classrooms-flyer.jpeg";
 
 const STARTS_AT = "2026-10-17T16:00:00+01:00";
 const REGISTER_URL = "https://luma.com/0q687e5v";
@@ -94,7 +94,7 @@ const UpcomingEventSection = () => {
 
         <ScrollReveal delay={150}>
           <img
-            src={flyer.url}
+            src={flyer}
             alt="Event flyer for Creating Inclusive Classrooms, a free teachers’ training on 17 October, 2026 at 4:00 PM WAT, live on Zoom"
             loading="lazy"
             className="mx-auto w-full max-w-md rounded-xl border border-authority-foreground/15 object-contain shadow-2xl"

@@ -5,3 +5,7 @@
 - [x] Verify first-pass core navigation, existing routes, desktop/mobile, reduced motion, images, video and error reports; launch QA remains deferred as documented.
 - [x] Identify deferred backend/CMS/integration work and required manual tests in audit.
 - [ ] Await DOE: verified metrics/story consent/resources, legal policies/status, live program/training/fund details, authority claims and content owners. Do not fabricate or publish availability.
+## Portable website images
+
+- [x] Recover original hosted photos and flyers as local files and replace image pointer imports.
+- [x] Verify all 20 recovered originals byte-for-byte, locally rendered photos/flyers and gallery expansion; existing automated test passes and preview build reports build OK. Existing logos, portraits and favicons are already local. Backend-managed Media Features and unused video pointers remain unchanged.

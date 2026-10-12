@@ -6,3 +6,4 @@
 - Keep phase status, deferred CMS/integration work and launch verification in the root roadmap and user-facing audit report, because partial core delivery is not a launch certification.
 - Keep normal route scroll restoration instant and honor explicit section hashes, because involvement pathways link to distinct sections rather than the page top.
 - Retain the original hero video and a browser-compatible WebM derivative with pause and reduced-motion controls, because codec support and accessible motion must not remove existing media functionality.
+- Store static website images as real files in src/assets or public/images and reference them with Vite imports or public paths, because independent deployments must not depend on platform-specific image serving. Preserve backend-managed media storage integrations.
