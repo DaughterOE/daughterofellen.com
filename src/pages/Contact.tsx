@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import { submitForm } from "@/lib/submitForm";
 import { toast } from "sonner";
@@ -50,33 +51,32 @@ const Contact = () => {
                 <h2 className="font-heading text-2xl font-bold text-foreground">Contact Details</h2>
                 <div className="gold-divider mt-4 mb-8" />
                 <div className="space-y-4 text-sm text-muted-foreground">
-                  <div className="flex gap-4">
+                  <div className="flex flex-wrap gap-2 sm:flex-nowrap sm:gap-4">
                     <span className="font-semibold text-foreground w-28 shrink-0">Organisation</span>
-                    <span>Daughter of Ellen, an initiative of the Evon Anthony Brand</span>
+                    <span>Daughter of Ellen Support and Empowerment Initiative</span>
                   </div>
-                  <div className="flex gap-4">
+                  <div className="flex flex-wrap gap-2 sm:flex-nowrap sm:gap-4">
                     <span className="font-semibold text-foreground w-28 shrink-0">Founder</span>
                     <span>Eyvonne Eleko</span>
                   </div>
-                  <div className="flex gap-4">
+                  <div className="flex flex-wrap gap-2 sm:flex-nowrap sm:gap-4">
                     <span className="font-semibold text-foreground w-28 shrink-0">Email</span>
                     <a href="mailto:info@daughterofellen.org" className="underline-sweep text-secondary transition-colors hover:text-foreground">info@daughterofellen.org</a>
                   </div>
-                  <div className="flex gap-4">
+                  <div className="flex flex-wrap gap-2 sm:flex-nowrap sm:gap-4">
                     <span className="font-semibold text-foreground w-28 shrink-0">Website</span>
                     <span>
                       <a href="https://www.daughterofellen.org" target="_blank" rel="noreferrer" className="underline-sweep text-secondary transition-colors hover:text-foreground">www.daughterofellen.org</a>
-                      {" | "}
-                      <a href="https://www.evonanthony.com" target="_blank" rel="noreferrer" className="underline-sweep text-secondary transition-colors hover:text-foreground">www.evonanthony.com</a>
+
                     </span>
                   </div>
-                    <div className="flex gap-4">
+                    <div className="flex flex-wrap gap-2 sm:flex-nowrap sm:gap-4">
                      <span className="font-semibold text-foreground w-28 shrink-0">Location</span>
                      <span>Abuja, Federal Capital Territory, Nigeria | Dallas, Texas</span>
                    </div>
-                    <div className="flex gap-4">
+                    <div className="flex flex-wrap gap-2 sm:flex-nowrap sm:gap-4">
                       <span className="font-semibold text-foreground w-28 shrink-0">Social</span>
-                      <div className="flex gap-3">
+                      <div className="flex flex-wrap gap-3">
                         <a href="https://www.instagram.com/_daughterofellen" target="_blank" rel="noreferrer" className="underline-sweep text-secondary transition-colors hover:text-foreground">Instagram</a>
                         <a href="https://www.youtube.com/channel/UCIh1_524EWN_IfS-M5yO0Vw" target="_blank" rel="noreferrer" className="underline-sweep text-secondary transition-colors hover:text-foreground">YouTube</a>
                         <a href="https://chat.whatsapp.com/GsfURXWU8fK6EnWHG8x2CW" target="_blank" rel="noreferrer" className="underline-sweep text-secondary transition-colors hover:text-foreground">WhatsApp</a>
@@ -90,8 +90,8 @@ const Contact = () => {
                 <div className="gold-divider mt-4 mb-8" />
                 <div className="space-y-6 text-sm text-muted-foreground">
                   <div>
-                    <h4 className="font-semibold text-foreground">Partnership and Sponsorship</h4>
-                    <p>To discuss partnership or sponsorship opportunities, email <a href="mailto:partnership@daughterofellen.org" className="text-secondary">partnership@daughterofellen.org</a> with the subject line: Partnership Enquiry.</p>
+                    <h4 className="font-semibold text-foreground">Partnerships and Sponsorship</h4>
+                    <p>To discuss partnerships or sponsorship opportunities, email <a href="mailto:partnership@daughterofellen.org" className="text-secondary">partnership@daughterofellen.org</a> with the subject line: Partnership Enquiry.</p>
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Speaker Nominations</h4>
@@ -122,51 +122,55 @@ const Contact = () => {
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="mb-1 block text-sm font-medium text-foreground">Full Name</label>
+                  <label htmlFor="contact-name" className="mb-1 block text-sm font-medium text-foreground">Full Name</label>
                   <input
                     type="text"
                     required
+                    id="contact-name"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground transition-all duration-300 input-gold-focus focus:outline-none"
                   />
                 </div>
                 <div>
-                  <label className="mb-1 block text-sm font-medium text-foreground">Email</label>
+                  <label htmlFor="contact-email" className="mb-1 block text-sm font-medium text-foreground">Email</label>
                   <input
                     type="email"
                     required
+                    id="contact-email"
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                     className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground transition-all duration-300 input-gold-focus focus:outline-none"
                   />
                 </div>
                 <div>
-                  <label className="mb-1 block text-sm font-medium text-foreground">Subject</label>
+                  <label htmlFor="contact-subject" className="mb-1 block text-sm font-medium text-foreground">Subject</label>
                   <input
                     type="text"
+                    id="contact-subject"
                     value={form.subject}
                     onChange={(e) => setForm({ ...form, subject: e.target.value })}
                     className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground transition-all duration-300 input-gold-focus focus:outline-none"
                   />
                 </div>
                 <div>
-                  <label className="mb-1 block text-sm font-medium text-foreground">Message</label>
+                  <label htmlFor="contact-message" className="mb-1 block text-sm font-medium text-foreground">Message</label>
                   <textarea
                     rows={5}
                     required
+                    id="contact-message"
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground transition-all duration-300 input-gold-focus focus:outline-none"
                   />
                 </div>
-                <button
+                <Button
                   type="submit"
                   disabled={loading}
                   className="rounded-full bg-secondary px-8 py-3 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300 gold-glow-hover hover:scale-105 hover:-translate-y-0.5 disabled:opacity-60"
                 >
                   {loading ? "Sending..." : "Get in Touch"}
-                </button>
+                </Button>
               </form>
             </div>
           </div>

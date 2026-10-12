@@ -2,11 +2,12 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Index from "./pages/Index";
+import { WhatWeDo, OurApproach, GetSupport, Learn, Impact, ProgramPage } from "./pages/InstitutionalPages";
 import About from "./pages/About";
 import Mission from "./pages/Mission";
 import Vision from "./pages/Vision";
@@ -19,6 +20,7 @@ import AbujaDeclaration from "./pages/AbujaDeclaration";
 import WhoShouldAttend from "./pages/WhoShouldAttend";
 import Founder from "./pages/Founder";
 import GetInvolved from "./pages/GetInvolved";
+import AccessFund from "./pages/AccessFund";
 import Partner from "./pages/Partner";
 import Community from "./pages/Community";
 import Contact from "./pages/Contact";
@@ -41,8 +43,15 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <Navbar />
+        <div id="main-content" tabIndex={-1}>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/what-we-do" element={<WhatWeDo />} />
+          <Route path="/what-we-do/:slug" element={<ProgramPage />} />
+          <Route path="/our-approach" element={<OurApproach />} />
+          <Route path="/get-support" element={<GetSupport />} />
+          <Route path="/learn" element={<Learn />} />
+          <Route path="/impact" element={<Impact />} />
           <Route path="/about" element={<About />} />
           <Route path="/mission" element={<Mission />} />
           <Route path="/vision" element={<Vision />} />
@@ -55,6 +64,7 @@ const App = () => (
           <Route path="/who-should-attend" element={<WhoShouldAttend />} />
           <Route path="/founder" element={<Founder />} />
           <Route path="/get-involved" element={<GetInvolved />} />
+          <Route path="/access-fund" element={<AccessFund />} />
           <Route path="/partner" element={<Partner />} />
           <Route path="/community" element={<Community />} />
           <Route path="/contact" element={<Contact />} />
@@ -62,11 +72,15 @@ const App = () => (
           <Route path="/join-tende" element={<JoinTende />} />
           <Route path="/media" element={<Media />} />
           <Route path="/auth" element={<Auth />} />
+          <Route path="/admin" element={<Navigate to="/auth" replace />} />
+          <Route path="/dashboard-login" element={<Navigate to="/auth" replace />} />
+          <Route path="/dashboard" element={<Navigate to="/admin/media" replace />} />
           <Route path="/admin/media" element={<AdminMedia />} />
           <Route path="/admin/submissions" element={<AdminSubmissions />} />
           <Route path="/unsubscribe" element={<Unsubscribe />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </div>
         <Footer />
       </BrowserRouter>
     </TooltipProvider>

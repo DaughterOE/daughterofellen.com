@@ -18,6 +18,7 @@ export default {
         body: ['Calibri', '"Gill Sans"', '"Trebuchet MS"', 'sans-serif'],
       },
       colors: {
+        authority: { DEFAULT: "hsl(var(--authority))", foreground: "hsl(var(--authority-foreground))" },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

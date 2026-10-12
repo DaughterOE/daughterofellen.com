@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --background: 30 33% 96%;
-    --foreground: 0 0% 10%;
+    --background: 37.500 44.444% 96.471%;
+    --foreground: 24.000 32.609% 18.039%;
 
     --card: 30 25% 94%;
     --card-foreground: 0 0% 10%;
@@ -13,14 +13,14 @@
     --popover: 30 33% 96%;
     --popover-foreground: 0 0% 10%;
 
-    --primary: 153 44% 20%;
-    --primary-foreground: 30 33% 96%;
+    --primary: 152.609 45.098% 20.000%;
+    --primary-foreground: 37.500 44.444% 96.471%;
 
-    --secondary: 37 55% 50%;
-    --secondary-foreground: 30 33% 96%;
+    --secondary: 39.021 56.972% 50.784%;
+    --secondary-foreground: 24.000 32.609% 18.039%;
 
     --muted: 30 15% 90%;
-    --muted-foreground: 150 10% 58%;
+    --muted-foreground: 146.667 15.976% 33.137%;
 
     --accent: 37 55% 50%;
     --accent-foreground: 30 33% 96%;
@@ -33,20 +33,22 @@
     --ring: 37 55% 50%;
 
     --radius: 0.5rem;
+    --authority: 152.609 45.098% 20%;
+    --authority-foreground: 37.5 44.444% 96.471%;
 
-    --gold: 37 55% 50%;
+    --gold: 39.021 56.972% 50.784%;
     --gold-light: 37 65% 71%;
     --gold-glow: 37 70% 55%;
-    --forest: 153 44% 20%;
-    --forest-light: 153 30% 30%;
-    --sage: 153 30% 30%;
-    --leaf: 152 40% 52%;
+    --forest: 152.609 45.098% 20.000%;
+    --forest-light: 153.443 40.397% 29.608%;
+    --sage: 153.443 40.397% 29.608%;
+    --leaf: 152.079 41.224% 51.961%;
     --mint: 145 45% 81%;
-    --cream: 30 33% 96%;
+    --cream: 37.500 44.444% 96.471%;
     --cream-dark: 30 25% 90%;
     --parchment: 40 40% 91%;
-    --ink: 0 0% 10%;
-    --mist: 150 10% 58%;
+    --ink: 24.000 32.609% 18.039%;
+    --mist: 147.000 9.346% 58.039%;
 
     --sidebar-background: 30 33% 96%;
     --sidebar-foreground: 153 44% 20%;
@@ -240,4 +242,17 @@
   .animate-count-up {
     animation: countUp 2s ease-out forwards;
   }
+}
+@layer base {
+  * { letter-spacing: 0 !important; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid hsl(var(--ring)); outline-offset: 4px; }
+  [id] { scroll-margin-top: 7rem; }
+}
+@layer components {
+  .deco-orb { display: none; }
+  .hero-scrim { background: linear-gradient(90deg, hsl(var(--authority) / 0.92), hsl(var(--authority) / 0.58)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  .motion-reveal { opacity: 1 !important; transform: none !important; }
 }

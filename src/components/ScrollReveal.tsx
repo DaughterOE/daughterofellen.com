@@ -11,6 +11,7 @@ const ScrollReveal = ({ children, className = "", delay = 0 }: ScrollRevealProps
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setVisible(true); return; }
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -27,7 +28,7 @@ const ScrollReveal = ({ children, className = "", delay = 0 }: ScrollRevealProps
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ease-out ${
+      className={`motion-reveal transition-all duration-700 ease-out ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       } ${className}`}
     >

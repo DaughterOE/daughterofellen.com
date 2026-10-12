@@ -19,7 +19,7 @@ const ContactConfirmationEmail = ({ name, formSource }: Props) => (
       <Container style={container}>
         <Section style={header}>
           <Heading style={h1}>Daughter of Ellen</Heading>
-          <Text style={tagline}>Celebrating Every Child's Brilliance.</Text>
+          <Text style={tagline}>Designed to Include.</Text>
         </Section>
         <Section style={body}>
           <Heading style={h2}>

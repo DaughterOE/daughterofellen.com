@@ -70,7 +70,7 @@ Deno.serve(async (req) => {
   <div style="font-family:Calibri,Arial,sans-serif;max-width:600px;margin:0 auto;">
     <div style="background:#1a3a2e;padding:28px 25px;text-align:center;">
       <h1 style="font-family:Georgia,serif;color:#d4af37;margin:0;font-size:24px;">Daughter of Ellen</h1>
-      <p style="color:#fff;font-style:italic;font-family:Georgia,serif;margin:8px 0 0;font-size:13px;">Celebrating Every Child's Brilliance.</p>
+      <p style="color:#fff;font-style:italic;font-family:Georgia,serif;margin:8px 0 0;font-size:13px;">Designed to Include.</p>
     </div>
     <div style="padding:28px 25px;">
       <h2 style="font-family:Georgia,serif;color:#1a3a2e;margin:0 0 16px;">Thank you, ${escapeHtml(submitterName)}.</h2>

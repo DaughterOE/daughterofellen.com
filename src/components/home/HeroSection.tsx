@@ -1,61 +1,39 @@
 import { Link } from "react-router-dom";
-import ScrollReveal from "@/components/ScrollReveal";
-import { ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { brand } from "@/lib/institutionalContent";
+import heroImage from "@/assets/hero-bg.jpg";
+import { useEffect, useRef, useState } from "react";
+import { Pause, Play } from "lucide-react";
 
-const HeroSection = () => (
-  <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-    <div className="absolute inset-0 bg-primary" />
-    <video
-      autoPlay
-      muted
-      loop
-      playsInline
-      preload="auto"
-      disablePictureInPicture
-      className="absolute inset-0 h-full w-full object-cover"
-      style={{ willChange: "transform" }}
-      ref={(el) => {
-        if (el) el.play().catch(() => {});
-      }}
-      src="/hero-video.mov"
-    />
-    <div className="noise-overlay absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/60 to-primary/90" />
-
-    <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
-      <ScrollReveal>
-        <h1 className="font-heading text-5xl font-bold leading-tight text-primary-foreground md:text-7xl lg:text-8xl">
-          Celebrating Every Child's Brilliance.
-        </h1>
-      </ScrollReveal>
-      <ScrollReveal delay={200}>
-        <p className="mt-6 font-body text-lg text-primary-foreground/90 md:text-xl">
-          Daughter of Ellen is Africa's emerging movement for neurodivergence inclusion and disability rights. We advocate. We educate. We build communities that leave no child behind.
-        </p>
-      </ScrollReveal>
-      <ScrollReveal delay={400}>
-        <p className="mt-3 font-heading text-base italic text-primary-foreground/70 md:text-lg">
-          Not a limitation. A different kind of brilliance.
-        </p>
-      </ScrollReveal>
-      <ScrollReveal delay={600}>
-        <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-          <Link
-            to="/get-involved"
-            className="rounded-full bg-secondary px-8 py-3.5 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300 gold-glow-hover hover:scale-105 hover:-translate-y-0.5"
-          >
-            Join the Movement
-          </Link>
-        </div>
-      </ScrollReveal>
-
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-        <div className="animate-scroll-indicator flex flex-col items-center gap-1 text-primary-foreground/50">
-          <span className="text-xs font-body tracking-widest uppercase">Discover our story</span>
-          <ChevronDown size={18} />
-        </div>
-      </div>
+const HeroSection = () => {
+  const video = useRef<HTMLVideoElement>(null);
+  const [paused, setPaused] = useState(() => window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  useEffect(() => {
+    if (paused) video.current?.pause();
+    else video.current?.play().catch(() => setPaused(true));
+  }, [paused]);
+  useEffect(() => {
+    const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const onChange = () => { if (preference.matches) setPaused(true); };
+    preference.addEventListener("change", onChange);
+    return () => preference.removeEventListener("change", onChange);
+  }, []);
+  return <section className="relative isolate flex min-h-[650px] items-center overflow-hidden bg-authority px-6 pb-16 pt-32 text-authority-foreground md:min-h-[720px] md:px-12">
+  <img src={heroImage} alt="" fetchPriority="high" className="absolute inset-0 -z-20 h-full w-full object-cover" />
+  <video ref={video} muted loop playsInline preload="metadata" poster={heroImage} aria-hidden="true" className="absolute inset-0 -z-20 h-full w-full object-cover" src="/hero-video.webm" />
+  <div className="hero-scrim absolute inset-0 -z-10" />
+  <div className="mx-auto w-full max-w-6xl">
+    <p className="mb-6 text-sm font-semibold">DAUGHTER OF ELLEN</p>
+    <h1 className="max-w-3xl font-heading text-5xl leading-tight md:text-7xl">{brand.tagline}</h1>
+    <p className="mt-7 max-w-2xl text-xl leading-relaxed md:text-2xl">{brand.descriptor}</p>
+    <p className="mt-5 max-w-2xl text-base leading-relaxed text-authority-foreground/90">{brand.support}</p>
+    <div className="mt-9 flex flex-wrap gap-3">
+      <Button asChild variant="secondary" size="lg"><Link to="/get-support">Get Support</Link></Button>
+      <Button asChild variant="outline" size="lg"><Link to="/learn">Learn &amp; Train</Link></Button>
+      <Button asChild variant="outline" size="lg"><Link to="/partner">Partner With Us</Link></Button>
     </div>
-  </section>
-);
-
+  </div>
+  <Button variant="outline" size="icon" className="absolute bottom-4 right-6" onClick={() => setPaused(!paused)} aria-label={paused ? "Play background video" : "Pause background video"} title={paused ? "Play background video" : "Pause background video"}>{paused ? <Play /> : <Pause />}</Button>
+</section>;
+};
 export default HeroSection;

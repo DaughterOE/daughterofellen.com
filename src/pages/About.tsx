@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
 import evonAnthony from "@/assets/evon-anthony.jpeg";
 import TeamSection from "@/components/home/TeamSection";
+import { brand, foundations } from "@/lib/institutionalContent";
 
 const About = () => {
   return (
@@ -11,7 +12,9 @@ const About = () => {
         <div className="deco-orb -right-24 top-0 h-72 w-72 bg-secondary" />
         <div className="relative mx-auto max-w-3xl">
           <ScrollReveal>
-            <h1 className="font-heading text-4xl font-bold text-foreground md:text-5xl">Who We Are</h1>
+            <h1 className="font-heading text-4xl font-bold text-foreground md:text-5xl">About Daughter of Ellen</h1>
+            <p className="mt-6 font-heading text-2xl text-foreground">{brand.tagline}</p>
+            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">{brand.descriptor}</p>
             <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
           </ScrollReveal>
           <ScrollReveal delay={200}>
@@ -21,7 +24,7 @@ const About = () => {
                 Daughter of Ellen was born from conviction and personal experience. Named as a tribute to legacy, resilience, and the quiet, unwavering strength of maternal love, the initiative carries in its name a promise: that every child will be seen the way a mother sees her daughter, fully, without condition, and with fierce, uncompromising hope.
               </p>
               <p>
-                Founded under the Evon Anthony Brand, Daughter of Ellen began as a response to a reality that millions of Nigerian and African families live every day but rarely speak about publicly: the reality of raising, educating, loving, or being a neurodivergent child in a world that was not designed with that child in mind.
+                {brand.support}
               </p>
               <p>
                 The founders recognized that the barriers facing neurodivergent children across Africa are not simply medical. They are structural, cultural, and political. Early diagnosis is inaccessible. Inclusive education is rare. Workplaces are unwelcoming. Policy frameworks exist on paper but not in practice. Families carry these burdens largely alone.
@@ -65,7 +68,7 @@ const About = () => {
           <ScrollReveal delay={200}>
             <div className="mt-10 space-y-6 text-base leading-relaxed text-muted-foreground">
               <p>
-                We are not a support group. We are not a one-off awareness campaign. We are a long-term movement with a structured strategy, an institutional backbone, and a clear vision: a generation of neurodivergent children across Nigeria and Africa who grow with dignity, confidence, and full opportunity.
+                {brand.thesis}
               </p>
               <p>
                 Our work is evidence-based, policy-oriented, and community-rooted. We bring together parents, clinicians, educators, employers, policymakers, and neurodivergent individuals at the same table, not in separate rooms.
@@ -79,29 +82,14 @@ const About = () => {
       <section className="section-padding relative overflow-hidden bg-background">
         <div className="deco-orb right-0 top-1/4 h-72 w-72 bg-secondary" />
         <div className="relative mx-auto max-w-6xl">
+          <h2 className="mb-10 font-heading text-3xl">Our Foundations</h2>
           <div className="grid gap-8 md:grid-cols-3">
-            {[
-              {
-                num: "01",
-                title: "Early Identification and Intervention",
-                desc: "We work to ensure that neurodivergent children are identified at the earliest possible stage of development and given access to appropriate, compassionate, and effective support. Early intervention changes the trajectory of a child's life.",
-              },
-              {
-                num: "02",
-                title: "Parent and Educator Support",
-                desc: "Families and teachers are on the front line. We equip them with training, peer networks, practical resources, and access to professionals who understand what they are navigating. No parent should carry this journey alone.",
-              },
-              {
-                num: "03",
-                title: "Public Awareness and Policy Advocacy",
-                desc: "Cultural stigma and weak policy enforcement are among the greatest barriers to inclusion. We challenge both. Through advocacy, public education, and direct engagement with legislators, we work to shift narratives and strengthen the legal frameworks protecting neurodivergent individuals.",
-              },
-            ].map((pillar, i) => (
+            {foundations.map((pillar, i) => (
               <ScrollReveal key={i} delay={i * 150}>
                 <div className="rounded-xl border border-border bg-card p-8 transition-all duration-500 hover:border-secondary hover:-translate-y-1">
-                  <span className="text-xs font-bold uppercase tracking-widest text-secondary">{pillar.num}</span>
+                  <span className="text-xs font-bold uppercase tracking-widest text-secondary">0{i + 1}</span>
                   <h3 className="mt-2 font-heading text-xl font-semibold text-foreground">{pillar.title}</h3>
-                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{pillar.desc}</p>
+                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{pillar.description}</p>
                 </div>
               </ScrollReveal>
             ))}

@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import ScrollReveal from "@/components/ScrollReveal";
 import { toast } from "@/hooks/use-toast";
@@ -31,15 +32,17 @@ const NewsletterSection = () => {
       <div className="relative mx-auto max-w-2xl text-center">
         <ScrollReveal>
           <h2 className="mb-4 font-heading text-3xl font-bold text-foreground md:text-4xl">
-            Stay part of the conversation.
+            Stay Connected.
           </h2>
           <p className="mx-auto max-w-xl text-base leading-relaxed text-muted-foreground">
-            Join parents, educators, professionals, and advocates across Nigeria receiving updates, resources, and advocacy news from Daughter of Ellen. Be the first to hear about conference announcements, policy developments, and community events.
+            Get practical inclusion resources, DOE updates and upcoming training.
           </p>
         </ScrollReveal>
         <ScrollReveal delay={200}>
           <form onSubmit={handleSubmit} className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <label htmlFor="newsletter-email" className="sr-only">Email address</label>
             <input
+              id="newsletter-email"
               type="email"
               required
               value={email}
@@ -47,13 +50,13 @@ const NewsletterSection = () => {
               placeholder="Enter your email address"
               className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground transition-all duration-300 input-gold-focus focus:outline-none sm:max-w-sm"
             />
-            <button
+            <Button
               type="submit"
               disabled={loading}
               className="shrink-0 rounded-full bg-secondary px-8 py-3 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300 gold-glow-hover hover:scale-105 hover:-translate-y-0.5 disabled:opacity-60"
             >
               {loading ? "..." : "Subscribe"}
-            </button>
+            </Button>
           </form>
         </ScrollReveal>
       </div>
