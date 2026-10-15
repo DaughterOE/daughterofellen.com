@@ -256,7 +256,7 @@
 }
 @layer components {
   .deco-orb { display: none; }
-  .hero-scrim { background: hsl(0 0% 0% / 0.55); }
+  .hero-scrim { background: linear-gradient(100deg, hsl(0 0% 0% / 0.78) 0%, hsl(0 0% 0% / 0.62) 48%, hsl(0 0% 0% / 0.4) 100%); }
   .gold-glow, .gold-glow-hover:hover { box-shadow: none; }
 }
 @media (prefers-reduced-motion: reduce) {
