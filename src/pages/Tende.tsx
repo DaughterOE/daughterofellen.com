@@ -65,7 +65,7 @@ const Tende = () => {
           <h2 className="mb-4 font-heading text-3xl font-bold text-foreground md:text-4xl">
             Who This Space Is For
           </h2>
-          <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+          <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
         </ScrollReveal>
         <ScrollReveal delay={200}>
           <div className="mt-10 space-y-6 text-base leading-relaxed text-muted-foreground">
@@ -91,12 +91,12 @@ const Tende = () => {
           <h2 className="mb-4 font-heading text-3xl font-bold text-foreground md:text-4xl">
             What Tende Offers
           </h2>
-          <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+          <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
         </ScrollReveal>
         <div className="mt-12 grid gap-8 md:grid-cols-2">
           {offerItems.map((item, i) => (
             <ScrollReveal key={i} delay={i * 120}>
-              <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-8 shadow-sm transition-all duration-500 hover:border-secondary hover:shadow-lg hover:-translate-y-1">
+              <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-8 shadow-sm transition-all duration-500 hover:border-secondary hover:-translate-y-1">
                 <h3 className="mb-3 font-heading text-xl font-semibold text-foreground">{item.title}</h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
               </div>
@@ -106,38 +106,41 @@ const Tende = () => {
       </div>
     </section>
 
-    {/* TENDE IN THE UNITED STATES */}
+    {/* TENDE EVENTS */}
     <section className="section-padding relative overflow-hidden bg-card">
       <div className="deco-orb left-1/3 top-0 h-80 w-80 bg-forest-light" />
       <div className="relative mx-auto max-w-3xl">
         <ScrollReveal>
           <h2 className="mb-4 font-heading text-3xl font-bold text-foreground md:text-4xl">
-            Tende in the United States
+            Tende Events
           </h2>
-          <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+          <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
         </ScrollReveal>
         <ScrollReveal delay={200}>
           <p className="mt-10 text-base leading-relaxed text-muted-foreground">
-            Tende by DOE is actively building its presence in the United States, starting with communities in cities like Dallas, Texas, where we are developing programming for a diverse audience of people across all backgrounds who are navigating mental wellness without always having community to support them. If you are in the U.S. and want to be part of what we are building, we want to hear from you.
+            Our first Tende by DOE gathering takes place in Lagos, Nigeria, bringing people together around rest, recovery and the work of tending to yourself. Tende events are open to anyone who is carrying more than they should carry alone, wherever they are.
+          </p>
+          <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+            We are also building Tende programming in the United States, beginning with Dallas, Texas.
           </p>
         </ScrollReveal>
         <ScrollReveal delay={300}>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               to="/join-tende"
-              className="rounded-full border-2 border-secondary bg-secondary px-6 py-2.5 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300 gold-glow-hover hover:shadow-lg"
+              className="rounded-md border-2 border-secondary bg-secondary px-6 py-2.5 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300"
             >
               Join the Tende Community
             </Link>
             <Link
               to="/get-involved"
-              className="rounded-full border-2 border-secondary px-6 py-2.5 font-body text-sm font-semibold text-foreground transition-all duration-300 hover:bg-secondary hover:text-secondary-foreground"
+              className="rounded-md border-2 border-secondary px-6 py-2.5 font-body text-sm font-semibold text-foreground transition-all duration-300 hover:bg-secondary hover:text-secondary-foreground"
             >
-              Register Your Interest for U.S. Events
+              Register for a Tende Event
             </Link>
             <Link
               to="/contact"
-              className="rounded-full border-2 border-border px-6 py-2.5 font-body text-sm font-semibold text-foreground transition-all duration-300 hover:border-secondary hover:text-secondary"
+              className="px-2 py-2.5 font-body text-sm font-semibold text-foreground underline-offset-4 hover:underline"
             >
               Contact Us
             </Link>
@@ -181,13 +184,13 @@ const Tende = () => {
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
               to="/pillars"
-              className="rounded-full border-2 border-secondary bg-secondary px-6 py-2.5 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300 gold-glow-hover hover:shadow-lg"
+              className="rounded-md border-2 border-secondary bg-secondary px-6 py-2.5 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300"
             >
               Learn About Our Advocacy Work
             </Link>
             <Link
               to="/about"
-              className="rounded-full border-2 border-secondary px-6 py-2.5 font-body text-sm font-semibold text-foreground transition-all duration-300 hover:bg-secondary hover:text-secondary-foreground"
+              className="rounded-md border-2 border-secondary px-6 py-2.5 font-body text-sm font-semibold text-foreground transition-all duration-300 hover:bg-secondary hover:text-secondary-foreground"
             >
               About Daughter of Ellen
             </Link>

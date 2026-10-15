@@ -14,7 +14,7 @@ import Vision from "./pages/Vision";
 import Pillars from "./pages/Pillars";
 import Conference from "./pages/Conference";
 import Projects from "./pages/Projects";
-import Events from "./pages/Events";
+import Events, { PastEvents, EventDetail } from "./pages/Events";
 import RedirectConference from "./pages/RedirectConference";
 import AbujaDeclaration from "./pages/AbujaDeclaration";
 import WhoShouldAttend from "./pages/WhoShouldAttend";
@@ -60,6 +60,8 @@ const App = () => (
           <Route path="/conference" element={<RedirectConference />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/events/past" element={<PastEvents />} />
+          <Route path="/events/:slug" element={<EventDetail />} />
           <Route path="/abuja-declaration" element={<AbujaDeclaration />} />
           <Route path="/who-should-attend" element={<WhoShouldAttend />} />
           <Route path="/founder" element={<Founder />} />

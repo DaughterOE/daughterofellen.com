@@ -20,7 +20,7 @@ const Navbar = () => {
         <Link to="/" aria-label="Daughter of Ellen home"><img src={logo} alt="Daughter of Ellen" className="h-14 w-auto dark:brightness-0 dark:invert" /></Link>
         <nav aria-label="Primary navigation" className="hidden items-center gap-1 lg:flex">
           {navigation.map(menu => <DropdownMenu key={menu.label}>
-            <DropdownMenuTrigger asChild><Button variant="ghost" className={location.pathname === menu.path ? "text-primary" : "text-foreground"}>{menu.label}<ChevronDown aria-hidden="true" /></Button></DropdownMenuTrigger>
+            <DropdownMenuTrigger asChild><Button variant="ghost" className={(location.pathname === menu.path || menu.links.some(l => l.path === location.pathname)) ? "text-primary" : "text-foreground"}>{menu.label}<ChevronDown aria-hidden="true" /></Button></DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="max-h-[70vh] max-w-[90vw] overflow-y-auto p-2">
               {menu.links.map(item => <DropdownMenuItem asChild key={item.path}><Link to={item.path} className="min-h-11 whitespace-normal">{item.label}</Link></DropdownMenuItem>)}
             </DropdownMenuContent>
@@ -34,7 +34,7 @@ const Navbar = () => {
             <DialogContent className="max-h-[85dvh] w-[calc(100%-2rem)] overflow-y-auto">
               <DialogTitle>Menu</DialogTitle><DialogDescription className="sr-only">Daughter of Ellen navigation</DialogDescription>
               <div className="flex flex-wrap gap-3"><DialogClose asChild><Button asChild><Link to="/get-support">Get Support</Link></Button></DialogClose><DialogClose asChild><Button asChild variant="outline"><Link to="/partner">Partner With Us</Link></Button></DialogClose></div>
-              <nav aria-label="Mobile navigation">{navigation.map(menu => <details key={menu.label} className="border-b border-border py-3"><summary className="cursor-pointer py-1 font-semibold">{menu.label}</summary><div className="flex flex-col py-2">{menu.links.map(item => <DialogClose asChild key={item.path}><Button asChild variant="ghost" className="min-h-11 justify-start whitespace-normal text-left"><Link to={item.path}>{item.label}</Link></Button></DialogClose>)}</div></details>)}</nav>
+              <nav aria-label="Mobile navigation"><DialogClose asChild><Link to="/" className="block border-b border-border py-4 font-semibold">Home</Link></DialogClose>{navigation.map(menu => <details key={menu.label} className="border-b border-border py-3"><summary className="cursor-pointer py-1 font-semibold">{menu.label}</summary><div className="flex flex-col py-2">{menu.links.map(item => <DialogClose asChild key={item.path}><Button asChild variant="ghost" className="min-h-11 justify-start whitespace-normal text-left"><Link to={item.path}>{item.label}</Link></Button></DialogClose>)}</div></details>)}</nav>
             </DialogContent>
           </Dialog>
         </div>

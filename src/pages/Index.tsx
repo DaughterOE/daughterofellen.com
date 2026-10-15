@@ -1,25 +1,23 @@
 import { Link } from "react-router-dom";
-import { ArrowUpRight, Users, GraduationCap, HeartHandshake, Briefcase, Building2 } from "lucide-react";
 import HeroSection from "@/components/home/HeroSection";
 import UpcomingEventSection from "@/components/home/UpcomingEventSection";
 import NewsletterSection from "@/components/home/NewsletterSection";
 import { ActionLink, ContentBand, Foundations, ProgramGrid } from "@/components/InstitutionalLayout";
-import { Button } from "@/components/ui/button";
 import { brand, programs } from "@/lib/institutionalContent";
 import walk from "@/assets/lagos/lagos-3.jpeg";
 
 const audiences = [
-  {label: "I’m a parent or caregiver", path: "/what-we-do/family-support", icon: HeartHandshake},
-  {label: "I’m an educator or school", path: "/what-we-do/inclusive-education", icon: GraduationCap},
-  {label: "I’m neurodivergent or disabled", path: "/what-we-do/adult-community", icon: Users},
-  {label: "I represent an employer", path: "/what-we-do/workplace-inclusion", icon: Briefcase},
-  {label: "I want to partner or fund", path: "/partner", icon: Building2},
+  {label: "I’m a parent or caregiver", line: "Guidance, resources and community for families.", path: "/what-we-do/family-support"},
+  {label: "I’m an educator or school", line: "Training and tools for inclusive classrooms.", path: "/what-we-do/inclusive-education"},
+  {label: "I’m neurodivergent or disabled", line: "An adult community to connect, learn and share.", path: "/what-we-do/adult-community"},
+  {label: "I represent an employer", line: "Support for building inclusive workplaces.", path: "/what-we-do/workplace-inclusion"},
+  {label: "I want to partner or fund", line: "Ways to partner with and fund DOE's work.", path: "/partner"},
 ];
 const Index = () => <main>
   <HeroSection />
   <ContentBand title="Inclusion should be designed in - not added later."><p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">{brand.thesis}</p></ContentBand>
   <UpcomingEventSection />
-  <ContentBand title="Find Your Pathway" tone="muted"><div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">{audiences.map(item => <Button asChild variant="outline" key={item.path} className="h-full min-h-40 flex-col items-start justify-between gap-6 whitespace-normal p-6 text-left"><Link to={item.path}><item.icon className="text-primary" aria-hidden="true" /><span className="text-base">{item.label}</span><ArrowUpRight aria-hidden="true" /></Link></Button>)}</div></ContentBand>
+  <ContentBand title="Find Your Pathway" tone="muted"><div className="grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-5">{audiences.map(item => <Link key={item.path} to={item.path} className="group block border-t-2 border-secondary pt-5"><h3 className="font-heading text-xl leading-snug">{item.label}</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.line}</p><span className="mt-4 inline-block text-sm font-semibold text-secondary-text group-hover:underline underline-offset-4">Explore</span></Link>)}</div></ContentBand>
   <Foundations />
   <ContentBand title="What We Do" tone="muted"><ProgramGrid /></ContentBand>
   <ContentBand title="The Daughter of Ellen Access Fund" tone="authority"><p className="mb-8 max-w-3xl text-lg leading-relaxed">{programs[5].description}</p><ActionLink to="/access-fund" secondary>Access Fund Information</ActionLink></ContentBand>

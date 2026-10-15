@@ -102,7 +102,7 @@ const JoinTende = () => {
           {submitted ? (
             <ScrollReveal>
               <div className="rounded-2xl border border-secondary/30 bg-card p-10 text-center md:p-14">
-                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-secondary/10">
+                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-md bg-secondary/10">
                   <svg className="h-8 w-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
@@ -204,7 +204,7 @@ const JoinTende = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="mt-8 w-full rounded-full border-2 border-secondary bg-secondary px-8 py-3 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300 gold-glow-hover hover:shadow-lg disabled:opacity-50"
+                  className="mt-8 w-full rounded-md border-2 border-secondary bg-secondary px-8 py-3 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300 disabled:opacity-50"
                 >
                   {loading ? "Submitting..." : "Join the Tende Community"}
                 </button>

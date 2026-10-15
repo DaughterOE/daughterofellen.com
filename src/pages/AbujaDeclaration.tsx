@@ -8,7 +8,7 @@ const AbujaDeclaration = () => (
       <div className="relative mx-auto max-w-3xl">
         <ScrollReveal>
           <h1 className="font-heading text-4xl font-bold text-foreground md:text-5xl">The Abuja Declaration</h1>
-          <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+          <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
           <p className="mt-6 font-heading text-xl italic text-foreground">A Living Document for Lasting Change</p>
         </ScrollReveal>
       </div>
@@ -22,7 +22,7 @@ const AbujaDeclaration = () => (
           <h2 className="mb-4 font-heading text-3xl font-bold text-foreground md:text-4xl">
             What Is the Abuja Declaration
           </h2>
-          <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+          <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
         </ScrollReveal>
         <ScrollReveal delay={200}>
           <div className="mt-10 space-y-6 text-base leading-relaxed text-muted-foreground">
@@ -52,30 +52,30 @@ const AbujaDeclaration = () => (
           <h2 className="mb-4 font-heading text-3xl font-bold text-foreground md:text-4xl">
             What the Declaration Covers
           </h2>
-          <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+          <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
         </ScrollReveal>
         <ScrollReveal delay={200}>
           <div className="mt-10 space-y-6 text-base leading-relaxed text-muted-foreground">
             <p>The Declaration addresses five domains of inclusion:</p>
             <ul className="space-y-3 pl-1">
               <li className="flex items-start gap-3">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary" />
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-md bg-secondary" />
                 <span>Commitments to accessible, timely, and culturally competent developmental screening across Nigeria: Early Identification</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary" />
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-md bg-secondary" />
                 <span>Commitments to inclusive classroom practice, teacher training, and curriculum reform: Education</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary" />
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-md bg-secondary" />
                 <span>Commitments to neurodiversity-affirming hiring practices and workplace accommodation frameworks: Employment</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary" />
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-md bg-secondary" />
                 <span>Commitments to stronger implementation and enforcement of existing disability law, and advocacy for legislative reform: Policy and Legislation</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary" />
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-md bg-secondary" />
                 <span>Commitments to reducing stigma, building peer networks, and creating public environments that actively include neurodivergent individuals: Community and Belonging</span>
               </li>
             </ul>
@@ -92,26 +92,26 @@ const AbujaDeclaration = () => (
           <h2 className="mb-4 font-heading text-3xl font-bold text-foreground md:text-4xl">
             How the Declaration Lives Beyond the Conference
           </h2>
-          <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+          <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
         </ScrollReveal>
         <ScrollReveal delay={200}>
           <div className="mt-10 space-y-6 text-base leading-relaxed text-muted-foreground">
             <p>Following its adoption, the Abuja Declaration will be:</p>
             <ul className="space-y-3 pl-1">
               <li className="flex items-start gap-3">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary" />
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-md bg-secondary" />
                 <span>Formally submitted to the Federal Ministry of Education, the Ministry of Humanitarian Affairs, and the National Assembly</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary" />
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-md bg-secondary" />
                 <span>Published and distributed to all conference delegates, partner organizations, and media contacts</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary" />
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-md bg-secondary" />
                 <span>Used as the basis for Daughter of Ellen's annual policy scorecard, tracking progress against commitments year on year</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary" />
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-md bg-secondary" />
                 <span>Updated and expanded at each subsequent annual conference, growing in scope and strengthening its accountability mechanisms</span>
               </li>
             </ul>

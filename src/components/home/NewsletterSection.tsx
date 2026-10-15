@@ -53,7 +53,7 @@ const NewsletterSection = () => {
             <Button
               type="submit"
               disabled={loading}
-              className="shrink-0 rounded-full bg-secondary px-8 py-3 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300 gold-glow-hover hover:scale-105 hover:-translate-y-0.5 disabled:opacity-60"
+              className="shrink-0 rounded-md bg-secondary px-8 py-3 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300 disabled:opacity-60"
             >
               {loading ? "..." : "Subscribe"}
             </Button>

@@ -15,7 +15,7 @@ const About = () => {
             <h1 className="font-heading text-4xl font-bold text-foreground md:text-5xl">About Daughter of Ellen</h1>
             <p className="mt-6 font-heading text-2xl text-foreground">{brand.tagline}</p>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">{brand.descriptor}</p>
-            <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+            <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <div className="mt-10 space-y-6 text-base leading-relaxed text-muted-foreground">
@@ -38,7 +38,7 @@ const About = () => {
               <div className="mt-4">
                 <Link
                   to="/tende"
-                  className="inline-block rounded-full border-2 border-secondary bg-secondary px-6 py-2.5 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300 gold-glow-hover hover:shadow-lg"
+                  className="inline-block rounded-md border-2 border-secondary bg-secondary px-6 py-2.5 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300"
                 >
                   Discover Tende by DOE
                 </Link>
@@ -63,7 +63,7 @@ const About = () => {
             <h2 className="mb-4 font-heading text-3xl font-bold text-foreground md:text-4xl">
               What Makes Us Different
             </h2>
-            <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+            <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <div className="mt-10 space-y-6 text-base leading-relaxed text-muted-foreground">
@@ -147,7 +147,7 @@ const About = () => {
               <h3 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
                 Executive Leadership and Professional Formation
               </h3>
-              <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+              <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
               <div className="mt-8 space-y-4 text-sm leading-relaxed text-muted-foreground">
                 <p>
                   With over a decade of senior leadership experience spanning governance, risk management, regulatory compliance, aerospace and technology program delivery, Eyvonne brings to Daughter of Ellen a level of executive rigor that is rare in mission-driven organizations. She has led complex, cross-functional initiatives, directed stakeholder engagement across executive and institutional environments, and designed strategic frameworks that align long-term vision with measurable, time-bound outcomes.
@@ -177,7 +177,7 @@ const About = () => {
               <h3 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
                 Public Advocacy and Media Presence
               </h3>
-              <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+              <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
               <div className="mt-8 space-y-4 text-sm leading-relaxed text-muted-foreground">
                 <p>
                   As a growing voice in disability inclusion and neurodiversity advocacy, Eyvonne has lent her voice to national and international conversations across television, radio, digital media, and public platforms in both the United States and Nigeria.
@@ -198,7 +198,7 @@ const About = () => {
               <h3 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
                 The Founding Vision
               </h3>
-              <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+              <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
               <div className="mt-8 space-y-4 text-sm leading-relaxed text-muted-foreground">
                 <p>
                   Daughter of Ellen was founded from both clarity of purpose and urgency of need. Eyvonne identified a persistent and largely unaddressed reality: while global conversations on neurodiversity and disability inclusion have gained momentum, African communities continue to confront deeply entrenched stigma, severely limited access to diagnostic services, fragmented and underfunded support infrastructure, and an almost total absence of enabling policy frameworks.
@@ -222,7 +222,7 @@ const About = () => {
               <h3 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
                 Strategic Oversight and Institutional Direction
               </h3>
-              <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+              <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
               <div className="mt-8 space-y-4 text-sm leading-relaxed text-muted-foreground">
                 <p>
                   As Chair, Eyvonne provides overarching strategic leadership across Daughter of Ellen's programs, partnerships, and long-term advocacy agenda. She leads the organization's vision to convene a high-calibre, multi-stakeholder community uniting parents, clinicians, educators, employers, human resources professionals, civil society leaders, policymakers, and individuals with lived experience in meaningful, outcome-oriented dialogue.
@@ -243,7 +243,7 @@ const About = () => {
               <h3 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
                 Leadership Philosophy
               </h3>
-              <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+              <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
               <p className="mt-8 text-sm leading-relaxed text-muted-foreground">
                 Eyvonne's leadership philosophy rests on three interlocking principles that define both her personal practice and the institutional character of Daughter of Ellen.
               </p>
@@ -257,7 +257,7 @@ const About = () => {
                     key={idx}
                     className="rounded-xl border border-border bg-background p-6 text-center transition-all duration-500 hover:border-secondary hover:-translate-y-1"
                   >
-                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-secondary/10">
+                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-md bg-secondary/10">
                       <span className="font-heading text-lg font-bold text-secondary">{p.principle.charAt(0)}</span>
                     </span>
                     <h5 className="mt-3 font-heading text-lg font-bold text-foreground">{p.principle}</h5>
@@ -283,7 +283,7 @@ const About = () => {
               <h3 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
                 Long-Term Vision and Continental Impact
               </h3>
-              <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+              <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
               <div className="mt-8 space-y-4 text-sm leading-relaxed text-muted-foreground">
                 <p>
                   Eyvonne's ambition for Daughter of Ellen extends well beyond a single country or a single cycle of advocacy. Her long-term vision is to establish Daughter of Ellen as the pre-eminent civil society voice on neurodivergence and disability inclusion across Africa, with a presence and influence that spans legislation, institutional practice, and public culture.

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowUpRight, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import type { ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 import { foundations, programs, programPath } from "@/lib/institutionalContent";
@@ -7,8 +7,8 @@ import { foundations, programs, programPath } from "@/lib/institutionalContent";
 export function ActionLink({ to, children, secondary = false }: { to: string; children: ReactNode; secondary?: boolean }) {
   const external = to.startsWith("http") || to.startsWith("mailto:");
   return <Button asChild variant={secondary ? "outline" : "default"} className="h-auto min-h-11 whitespace-normal text-left">
-    {external ? <a href={to} target={to.startsWith("http") ? "_blank" : undefined} rel={to.startsWith("http") ? "noopener noreferrer" : undefined}>{children}<ArrowUpRight aria-hidden="true" /></a>
-      : <Link to={to}>{children}<ArrowUpRight aria-hidden="true" /></Link>}
+    {external ? <a href={to} target={to.startsWith("http") ? "_blank" : undefined} rel={to.startsWith("http") ? "noopener noreferrer" : undefined}>{children}</a>
+      : <Link to={to}>{children}</Link>}
   </Button>;
 }
 
@@ -53,7 +53,7 @@ export function ProgramGrid() {
     {programs.map(item => <article key={item.slug} className="flex flex-col rounded-lg border border-border bg-background p-6">
       <h3 className="mb-4 font-heading text-xl">{item.shortTitle}</h3>
       <p className="mb-6 flex-1 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
-      <Button asChild variant="link" className="h-auto justify-start whitespace-normal p-0 text-left"><Link to={programPath(item.slug)}>Explore {item.shortTitle}<ArrowUpRight aria-hidden="true" /></Link></Button>
+      <Button asChild variant="link" className="h-auto justify-start whitespace-normal p-0 text-left"><Link to={programPath(item.slug)}>Explore {item.shortTitle}</Link></Button>
     </article>)}
   </div>;
 }

@@ -68,7 +68,7 @@ export function Learn() {
 
 export function Impact() {
   return <main className="pt-24"><PageHeading title="Impact & Evidence" description={programs[7].description} />
-    <ContentBand title="Building the evidence"><p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">DOE should prove work without overstating maturity. Reach, participation, outputs and outcomes are distinct measures.</p><div className="mt-8 flex flex-wrap gap-4"><ActionLink to="/projects">Explore Past Events / Projects</ActionLink><ActionLink to="/media" secondary>View Media Features</ActionLink></div></ContentBand>
+    <ContentBand title="Building the evidence"><p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">DOE should prove work without overstating maturity. Reach, participation, outputs and outcomes are distinct measures.</p><div className="mt-8 flex flex-wrap gap-4"><ActionLink to="/events/past">Explore Past Events</ActionLink><ActionLink to="/media" secondary>View Media Features</ActionLink></div></ContentBand>
     <ContentBand title="Evidence & Partnership" tone="muted"><div className="flex flex-wrap gap-4"><ActionLink to="/partner">Partner With Us</ActionLink><ActionLink to={inquiry("Research and Evidence Inquiry")} secondary>Contact DOE About Evidence</ActionLink></div></ContentBand>
   </main>;
 }

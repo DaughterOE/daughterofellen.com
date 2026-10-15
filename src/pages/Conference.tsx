@@ -1,5 +1,4 @@
 import ScrollReveal from "@/components/ScrollReveal";
-import { Calendar, Clock, Globe } from "lucide-react";
 
 const WEBINAR_URL = "https://event.getbookt.io/living-it-inclusion-accessibility-stigma-and-the-search-for-support";
 
@@ -21,15 +20,12 @@ const Conference = () => {
             <div className="gold-divider mx-auto mt-8 mb-6 max-w-xs" />
             <div className="mt-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-primary-foreground/80">
               <span className="inline-flex items-center gap-2">
-                <Calendar size={18} className="text-secondary" />
                 June 20th, 2026
               </span>
               <span className="inline-flex items-center gap-2">
-                <Clock size={18} className="text-secondary" />
                 3:00 PM WAT
               </span>
               <span className="inline-flex items-center gap-2">
-                <Globe size={18} className="text-secondary" />
                 Online Webinar
               </span>
             </div>
@@ -44,7 +40,7 @@ const Conference = () => {
             <h2 className="mb-4 font-heading text-3xl font-bold text-foreground md:text-4xl">
               About the Webinar
             </h2>
-            <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+            <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <div className="mt-10 space-y-5 text-base leading-relaxed text-muted-foreground">
@@ -75,7 +71,7 @@ const Conference = () => {
             <h2 className="mb-4 font-heading text-3xl font-bold text-foreground md:text-4xl">
               Event Details
             </h2>
-            <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+            <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <div className="mt-10 overflow-hidden rounded-xl border border-border bg-background">
@@ -119,7 +115,7 @@ const Conference = () => {
                 href={WEBINAR_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-full bg-secondary px-10 py-4 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300 gold-glow-hover hover:scale-105 hover:-translate-y-0.5"
+                className="inline-block rounded-md bg-secondary px-10 py-4 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300"
               >
                 Register on Bookt
               </a>

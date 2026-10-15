@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
-import { Calendar, Clock } from "lucide-react";
 
 const ConferencePreview = () => (
   <section className="section-padding relative overflow-hidden bg-primary">
@@ -17,11 +16,9 @@ const ConferencePreview = () => (
         <div className="gold-divider mx-auto mt-8 mb-6 max-w-xs" />
         <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-primary-foreground/80">
           <span className="inline-flex items-center gap-2">
-            <Calendar size={18} className="text-secondary" />
             June 20th, 2026
           </span>
           <span className="inline-flex items-center gap-2">
-            <Clock size={18} className="text-secondary" />
             3:00 PM WAT
           </span>
         </div>
@@ -32,7 +29,7 @@ const ConferencePreview = () => (
             href="https://event.getbookt.io/living-it-inclusion-accessibility-stigma-and-the-search-for-support"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block rounded-full bg-secondary px-10 py-4 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300 gold-glow-hover hover:scale-105 hover:-translate-y-0.5"
+            className="inline-block rounded-md bg-secondary px-10 py-4 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300"
           >
             Register for the Webinar
           </a>

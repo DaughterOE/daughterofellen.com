@@ -14,14 +14,14 @@ const Founder = () => (
           <ScrollReveal className="md:col-span-2">
             <div className="relative mx-auto max-w-sm md:max-w-none">
               <div className="absolute -inset-3 rounded-2xl border border-secondary/20" />
-              <div className="overflow-hidden rounded-xl shadow-2xl">
+              <div className="overflow-hidden rounded-xl">
                 <img
                   src={evonAnthony}
                   alt="Eyvonne Eleko"
                   className="h-full w-full object-cover object-top aspect-[3/4]"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 h-24 w-24 rounded-full border border-secondary/30" />
+              <div className="absolute -bottom-4 -right-4 h-24 w-24 rounded-md border border-secondary/30" />
             </div>
           </ScrollReveal>
 
@@ -69,7 +69,7 @@ const Founder = () => (
           <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
             Executive Leadership and Professional Formation
           </h2>
-          <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+          <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
         </ScrollReveal>
         <ScrollReveal delay={150}>
           <div className="mt-8 space-y-6 text-base leading-[1.85] text-muted-foreground">
@@ -111,7 +111,7 @@ const Founder = () => (
           <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
             Public Advocacy and Media Presence
           </h2>
-          <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+          <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
         </ScrollReveal>
         <ScrollReveal delay={150}>
           <div className="mt-8 space-y-6 text-base leading-[1.85] text-muted-foreground">
@@ -137,7 +137,7 @@ const Founder = () => (
           <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
             The Founding Vision
           </h2>
-          <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+          <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
         </ScrollReveal>
         <ScrollReveal delay={150}>
           <div className="mt-8 space-y-6 text-base leading-[1.85] text-muted-foreground">
@@ -166,7 +166,7 @@ const Founder = () => (
           <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
             Strategic Oversight and Institutional Direction
           </h2>
-          <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+          <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
         </ScrollReveal>
         <ScrollReveal delay={150}>
           <div className="mt-8 space-y-6 text-base leading-[1.85] text-muted-foreground">
@@ -192,7 +192,7 @@ const Founder = () => (
           <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
             Leadership Philosophy
           </h2>
-          <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+          <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
         </ScrollReveal>
         <ScrollReveal delay={150}>
           <p className="mt-8 text-base leading-[1.85] text-muted-foreground">
@@ -212,7 +212,7 @@ const Founder = () => (
                 transition={{ duration: 0.3 }}
                 className="rounded-xl border border-border bg-card p-6 text-center transition-colors duration-500 hover:border-secondary"
               >
-                <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-secondary/10">
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-md bg-secondary/10">
                   <span className="font-heading text-lg font-bold text-secondary">{p.principle.charAt(0)}</span>
                 </span>
                 <h5 className="mt-3 font-heading text-lg font-bold text-foreground">{p.principle}</h5>
@@ -243,7 +243,7 @@ const Founder = () => (
           <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
             Long-Term Vision and Continental Impact
           </h2>
-          <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+          <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
         </ScrollReveal>
         <ScrollReveal delay={150}>
           <div className="mt-8 space-y-6 text-base leading-[1.85] text-muted-foreground">

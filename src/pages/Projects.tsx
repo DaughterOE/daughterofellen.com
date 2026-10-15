@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
 import GallerySlider from "@/components/GallerySlider";
-import { Calendar, Clock, Globe, MapPin } from "lucide-react";
 import lagos1 from "@/assets/lagos/lagos-1.jpeg";
 import lagos2 from "@/assets/lagos/lagos-2.jpeg";
 import lagos3 from "@/assets/lagos/lagos-3.jpeg";
@@ -20,6 +19,7 @@ import lc7 from "@/assets/lagos-city/IMG_5982.jpg";
 import lc8 from "@/assets/lagos-city/IMG_6082.jpg";
 import lc9 from "@/assets/lagos-city/IMG_6103.jpg";
 import lc10 from "@/assets/lagos-city/IMG_6105.jpg";
+import walkGroup from "@/assets/walk-group.jpg";
 
 const lagosImages = [lagos1, lagos2, lagos3, lagos4, lagos5, lagos6, lagos7, lagos8];
 const lagosCityImages = [lc1, lc2, lc3, lc4, lc5, lc6, lc7, lc8, lc9, lc10];
@@ -28,7 +28,7 @@ const projects = [
   {
     title: "Walk for Neurodiversity and Disability Inclusion",
     location: "Abuja and Lagos, 2026",
-    image: lagos3,
+    image: walkGroup,
     description:
       "The Daughter of Ellen Foundation successfully hosted the Walk for Neurodiversity and Disability Inclusion across Abuja and Lagos, bringing together advocates, volunteers, families, professionals, and community members in a shared commitment to awareness, accessibility, and inclusion. The initiative was designed to increase public understanding of neurodiversity and disability, promote the importance of early support, and encourage more inclusive communities, workplaces, and educational environments. Through advocacy, community engagement, and public dialogue, the walks helped amplify the voices and experiences of neurodivergent individuals and persons with disabilities while fostering greater awareness of the barriers they face. This project reflects our ongoing mission to build a society where everyone has equal access to opportunities, support, dignity, and belonging.",
   },
@@ -60,14 +60,14 @@ const Projects = () => {
           {projects.map((project, i) => (
             <ScrollReveal key={i} delay={i * 100}>
               <article className="overflow-hidden rounded-xl border border-border bg-card transition-all duration-500 hover:border-secondary">
-                <div className="aspect-[3/2] w-full overflow-hidden bg-muted">
+                <div className="aspect-[1824/1215] w-full overflow-hidden bg-muted">
                   <img
                     src={project.image}
                     alt={project.title}
-                    width={1536}
-                    height={1024}
+                    width={1824}
+                    height={1215}
                     loading="lazy"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover object-center"
                   />
                 </div>
                 <div className="p-8 md:p-10">
@@ -77,7 +77,7 @@ const Projects = () => {
                   <h2 className="mt-3 font-heading text-2xl font-bold text-foreground md:text-3xl">
                     {project.title}
                   </h2>
-                  <div className="mt-3 h-1 w-16 rounded-full bg-secondary" />
+                  <div className="mt-3 h-1 w-16 rounded-md bg-secondary" />
                   <p className="mt-6 text-base leading-relaxed text-muted-foreground">
                     {project.description}
                   </p>
@@ -103,15 +103,12 @@ const Projects = () => {
             <div className="gold-divider mx-auto mt-8 mb-6 max-w-xs" />
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-primary-foreground/80">
               <span className="inline-flex items-center gap-2">
-                <Calendar size={18} className="text-secondary" />
                 Friday, August 7, 2026
               </span>
               <span className="inline-flex items-center gap-2">
-                <Clock size={18} className="text-secondary" />
                 6:00 PM - 8:00 PM GMT+1
               </span>
               <span className="inline-flex items-center gap-2">
-                <MapPin size={18} className="text-secondary" />
                 Zoom
               </span>
             </div>
@@ -125,13 +122,13 @@ const Projects = () => {
                 href="https://luma.com/33g5cl44"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-full bg-secondary px-10 py-4 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300 gold-glow-hover hover:scale-105 hover:-translate-y-0.5"
+                className="inline-block rounded-md bg-secondary px-10 py-4 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300"
               >
                 View Event Details
               </a>
               <Link
                 to="/events"
-                className="inline-block rounded-full border-2 border-primary-foreground/40 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition-all duration-300 hover:border-primary-foreground hover:bg-primary-foreground/10"
+                className="inline-block rounded-md border-2 border-primary-foreground/40 px-8 py-3.5 font-body text-sm font-semibold text-primary-foreground transition-all duration-300 hover:border-primary-foreground hover:bg-primary-foreground/10"
               >
                 See All Events
               </Link>
@@ -151,18 +148,15 @@ const Projects = () => {
             <h2 className="mt-3 font-heading text-3xl font-bold text-foreground md:text-4xl">
               Living It: Inclusion, Accessibility, Stigma and the Search for Support
             </h2>
-            <div className="mt-3 h-1 w-16 rounded-full bg-secondary" />
+            <div className="mt-3 h-1 w-16 rounded-md bg-secondary" />
             <div className="mt-6 flex flex-wrap items-center gap-x-8 gap-y-3 text-muted-foreground">
               <span className="inline-flex items-center gap-2">
-                <Calendar size={18} className="text-secondary" />
                 June 20th, 2026
               </span>
               <span className="inline-flex items-center gap-2">
-                <Clock size={18} className="text-secondary" />
                 3:00 PM WAT
               </span>
               <span className="inline-flex items-center gap-2">
-                <Globe size={18} className="text-secondary" />
                 Online Webinar
               </span>
             </div>
@@ -174,7 +168,7 @@ const Projects = () => {
                 href="https://event.getbookt.io/living-it-inclusion-accessibility-stigma-and-the-search-for-support"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-full bg-secondary px-8 py-3.5 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300 gold-glow-hover hover:scale-105 hover:-translate-y-0.5"
+                className="inline-block rounded-md bg-secondary px-8 py-3.5 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300"
               >
                 View Event Details
               </a>
@@ -193,7 +187,7 @@ const Projects = () => {
             <h2 className="mt-3 font-heading text-3xl font-bold text-foreground md:text-4xl">
               Abuja Pictures
             </h2>
-            <div className="mt-3 h-1 w-16 rounded-full bg-secondary" />
+            <div className="mt-3 h-1 w-16 rounded-md bg-secondary" />
           </ScrollReveal>
 
           <ScrollReveal delay={100}>
@@ -215,7 +209,7 @@ const Projects = () => {
             <h2 className="mt-3 font-heading text-3xl font-bold text-foreground md:text-4xl">
               Lagos Pictures
             </h2>
-            <div className="mt-3 h-1 w-16 rounded-full bg-secondary" />
+            <div className="mt-3 h-1 w-16 rounded-md bg-secondary" />
           </ScrollReveal>
 
           <ScrollReveal delay={100}>

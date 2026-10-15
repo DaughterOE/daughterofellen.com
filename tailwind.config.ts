@@ -28,7 +28,10 @@ export default {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
+        lightbox: { DEFAULT: "hsl(var(--lightbox))", foreground: "hsl(var(--lightbox-foreground))" },
         secondary: {
+          hover: "hsl(var(--secondary-hover))",
+          text: "hsl(var(--secondary-text))",
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },

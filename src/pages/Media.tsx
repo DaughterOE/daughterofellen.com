@@ -109,7 +109,7 @@ const MediaCard = ({ item }: { item: MediaFeature }) => {
             <Icon className="h-12 w-12 text-secondary" />
           </div>
         )}
-        <span className={`absolute left-3 top-3 inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-semibold ${meta.badgeClass}`}>
+        <span className={`absolute left-3 top-3 inline-flex items-center gap-1 rounded-md px-3 py-1 text-xs font-semibold ${meta.badgeClass}`}>
           <Icon className="h-3 w-3" />
           {meta.label}
         </span>
@@ -156,7 +156,7 @@ function getYouTubeId(url: string): string | null {
 
 function renderButton(item: MediaFeature) {
   const baseClasses =
-    "inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md";
+    "inline-flex items-center gap-2 rounded-md px-5 py-2.5 text-sm font-semibold transition-all duration-300 hover:shadow-md";
 
   if (item.media_type === "tv" && item.video_url) {
     const ytId = getYouTubeId(item.video_url);

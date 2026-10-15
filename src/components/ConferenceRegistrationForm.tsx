@@ -125,7 +125,7 @@ const ConferenceRegistrationForm = () => {
           <h2 className="mb-4 font-heading text-3xl font-bold text-foreground md:text-4xl">
             Webinar Registration
           </h2>
-          <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+          <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
         </ScrollReveal>
 
         <ScrollReveal delay={150}>
@@ -267,7 +267,7 @@ const ConferenceRegistrationForm = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full rounded-full bg-secondary px-10 py-4 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300 gold-glow-hover hover:scale-105 hover:-translate-y-0.5 disabled:opacity-50"
+              className="w-full rounded-md bg-secondary px-10 py-4 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300 disabled:opacity-50"
             >
               {loading ? "Submitting..." : "Register Now"}
             </button>

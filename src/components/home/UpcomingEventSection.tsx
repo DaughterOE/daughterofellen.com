@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Calendar, Clock, Globe } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import flyer from "@/assets/inclusive-classrooms-flyer.jpeg";
 
@@ -43,16 +42,13 @@ const UpcomingEventSection = () => {
             Equipping educators and caregivers with practical ways to support different learners in the classroom.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3 text-authority-foreground/80">
-            <span className="inline-flex items-center gap-2">
-              <Calendar size={18} className="text-secondary" />
+            <span className="">
               17 October, 2026
             </span>
-            <span className="inline-flex items-center gap-2">
-              <Clock size={18} className="text-secondary" />
+            <span className="">
               4:00 PM WAT
             </span>
-            <span className="inline-flex items-center gap-2">
-              <Globe size={18} className="text-secondary" />
+            <span className="">
               Live on Zoom
             </span>
           </div>
@@ -79,13 +75,13 @@ const UpcomingEventSection = () => {
               href={REGISTER_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded-full bg-secondary px-10 py-4 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300 gold-glow-hover hover:scale-105 hover:-translate-y-0.5"
+              className="inline-block rounded-md bg-secondary px-10 py-4 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300"
             >
               Register Now
             </a>
             <Link
-              to="/events"
-              className="inline-block rounded-full border-2 border-authority-foreground/40 px-8 py-3.5 font-body text-sm font-semibold text-authority-foreground transition-all duration-300 hover:border-authority-foreground hover:bg-authority-foreground/10"
+              to="/events#upcoming"
+              className="inline-block rounded-md border-2 border-authority-foreground/40 px-8 py-3.5 font-body text-sm font-semibold text-authority-foreground transition-all duration-300 hover:border-authority-foreground hover:bg-authority-foreground/10"
             >
               See All Events
             </Link>
@@ -97,7 +93,7 @@ const UpcomingEventSection = () => {
             src={flyer}
             alt="Event flyer for Creating Inclusive Classrooms, a free teachers’ training on 17 October, 2026 at 4:00 PM WAT, live on Zoom"
             loading="lazy"
-            className="mx-auto w-full max-w-md rounded-xl border border-authority-foreground/15 object-contain shadow-2xl"
+            className="mx-auto w-full max-w-md rounded-xl border border-authority-foreground/15 object-contain"
           />
         </ScrollReveal>
       </div>

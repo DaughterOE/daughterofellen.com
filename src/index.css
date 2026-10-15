@@ -18,6 +18,8 @@
 
     --secondary: 39.021 56.972% 50.784%;
     --secondary-foreground: 24.000 32.609% 18.039%;
+    --secondary-hover: 39 57% 44%;
+    --secondary-text: 37 60% 34%;
 
     --muted: 30 15% 90%;
     --muted-foreground: 146.667 15.976% 33.137%;
@@ -33,6 +35,8 @@
     --ring: 37 55% 50%;
 
     --radius: 0.5rem;
+    --lightbox: 150 30% 4%;
+    --lightbox-foreground: 0 0% 100%;
     --authority: 152.609 45.098% 20%;
     --authority-foreground: 37.5 44.444% 96.471%;
 
@@ -75,6 +79,8 @@
 
     --secondary: 37 40% 42%;
     --secondary-foreground: 150 30% 8%;
+    --secondary-hover: 37 40% 36%;
+    --secondary-text: 39 57% 62%;
 
     --muted: 150 20% 15%;
     --muted-foreground: 140 10% 60%;
@@ -250,7 +256,8 @@
 }
 @layer components {
   .deco-orb { display: none; }
-  .hero-scrim { background: linear-gradient(90deg, hsl(var(--authority) / 0.92), hsl(var(--authority) / 0.58)); }
+  .hero-scrim { background: hsl(0 0% 0% / 0.55); }
+  .gold-glow, .gold-glow-hover:hover { box-shadow: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }

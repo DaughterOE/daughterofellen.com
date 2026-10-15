@@ -10,7 +10,7 @@ const Divider = () => (
 const SectionHeading = ({ children }: { children: React.ReactNode }) => (
   <>
     <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">{children}</h2>
-    <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+    <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
   </>
 );
 
@@ -24,7 +24,7 @@ const AccessFund = () => (
           <h1 className="font-heading text-4xl font-bold text-foreground md:text-5xl">
             The Daughter of Ellen Access Fund
           </h1>
-          <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+          <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
           <p className="mt-6 font-heading text-xl font-semibold text-foreground">
             Expanding Access. Investing in People. Building More Inclusive Communities.
           </p>
@@ -117,7 +117,7 @@ const AccessFund = () => (
                 "Other accessibility related services reviewed on a case by case basis",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-md bg-secondary" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -152,7 +152,7 @@ const AccessFund = () => (
                 "Individuals seeking accessibility related services or support",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-md bg-secondary" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -212,7 +212,7 @@ const AccessFund = () => (
                 "Events and announcements",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary" />
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-md bg-secondary" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -225,7 +225,7 @@ const AccessFund = () => (
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-full bg-secondary px-8 py-3 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300 gold-glow-hover hover:scale-105 hover:-translate-y-0.5"
+                className="inline-block rounded-md bg-secondary px-8 py-3 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300"
               >
                 Join Our WhatsApp Community
               </a>
@@ -332,7 +332,7 @@ const AccessFund = () => (
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded-full bg-secondary px-10 py-4 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300 gold-glow-hover hover:scale-105 hover:-translate-y-0.5"
+              className="inline-block rounded-md bg-secondary px-10 py-4 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300"
             >
               Join Our WhatsApp Community
             </a>

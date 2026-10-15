@@ -44,7 +44,7 @@ const WhoShouldAttend = () => (
       <div className="relative mx-auto max-w-3xl">
         <ScrollReveal>
           <h1 className="font-heading text-4xl font-bold text-foreground md:text-5xl">Who Should Attend</h1>
-          <div className="mt-2 h-1 w-16 rounded-full bg-secondary" />
+          <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
         </ScrollReveal>
         <ScrollReveal delay={200}>
           <p className="mt-10 text-base leading-relaxed text-muted-foreground">
@@ -87,7 +87,7 @@ const WhoShouldAttend = () => (
               href="https://event.getbookt.io/living-it-inclusion-accessibility-stigma-and-the-search-for-support"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block rounded-full bg-secondary px-10 py-4 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300 gold-glow-hover hover:scale-105 hover:-translate-y-0.5"
+              className="inline-block rounded-md bg-secondary px-10 py-4 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300"
             >
               Register for the Webinar
             </a>

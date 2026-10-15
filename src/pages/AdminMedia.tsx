@@ -134,8 +134,8 @@ const Inner = () => {
                 </div>
                 <div className="min-w-0 flex-1">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="rounded-full bg-forest px-2 py-0.5 text-[10px] font-semibold uppercase text-cream">{it.media_type}</span>
-                    {!it.is_visible && <span className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-semibold uppercase text-muted-foreground">Hidden</span>}
+                    <span className="rounded-md bg-forest px-2 py-0.5 text-[10px] font-semibold uppercase text-cream">{it.media_type}</span>
+                    {!it.is_visible && <span className="rounded-md bg-muted px-2 py-0.5 text-[10px] font-semibold uppercase text-muted-foreground">Hidden</span>}
                     <span className="text-xs text-muted-foreground">{it.feature_date}</span>
                   </div>
                   <p className="mt-1 text-xs font-semibold uppercase tracking-wider text-secondary">{it.outlet_name}</p>
@@ -151,7 +151,7 @@ const Inner = () => {
 
           {editing && (
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 overflow-y-auto">
-              <div className="my-8 w-full max-w-2xl rounded-2xl bg-background p-6 shadow-2xl max-h-[90vh] overflow-y-auto">
+              <div className="my-8 w-full max-w-2xl rounded-2xl bg-background p-6 max-h-[90vh] overflow-y-auto">
                 <div className="flex items-center justify-between">
                   <h2 className="font-heading text-xl font-bold">{editing.id ? "Edit" : "Add"} Media Feature</h2>
                   <button onClick={() => setEditing(null)}><X className="h-5 w-5" /></button>

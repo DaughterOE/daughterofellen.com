@@ -16,7 +16,7 @@ const TendePreviewSection = () => (
 
       <div className="grid gap-8 md:grid-cols-2">
         <ScrollReveal delay={100}>
-          <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-8 shadow-sm transition-all duration-500 hover:border-secondary hover:shadow-lg hover:-translate-y-1 md:p-10">
+          <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-8 shadow-sm transition-all duration-500 hover:border-secondary hover:-translate-y-1 md:p-10">
             <h3 className="mb-4 font-heading text-xl font-semibold text-foreground">
               Advocacy: Africa and Diaspora
             </h3>
@@ -25,7 +25,7 @@ const TendePreviewSection = () => (
             </p>
             <Link
               to="/pillars"
-              className="inline-block self-start rounded-full border-2 border-secondary bg-secondary px-6 py-2.5 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300 gold-glow-hover hover:shadow-lg"
+              className="inline-block self-start rounded-md border-2 border-secondary bg-secondary px-6 py-2.5 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300"
             >
               Learn About Our Advocacy Work
             </Link>
@@ -33,7 +33,7 @@ const TendePreviewSection = () => (
         </ScrollReveal>
 
         <ScrollReveal delay={220}>
-          <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-8 shadow-sm transition-all duration-500 hover:border-secondary hover:shadow-lg hover:-translate-y-1 md:p-10">
+          <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-8 shadow-sm transition-all duration-500 hover:border-secondary hover:-translate-y-1 md:p-10">
             <h3 className="mb-4 font-heading text-xl font-semibold text-foreground">
               Tende by DOE
             </h3>
@@ -42,7 +42,7 @@ const TendePreviewSection = () => (
             </p>
             <Link
               to="/tende"
-              className="inline-block self-start rounded-full border-2 border-secondary bg-secondary px-6 py-2.5 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300 gold-glow-hover hover:shadow-lg"
+              className="inline-block self-start rounded-md border-2 border-secondary bg-secondary px-6 py-2.5 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300"
             >
               Discover Tende by DOE
             </Link>

@@ -36,7 +36,7 @@ export const navigation = [
   { label: "About", path: "/about", links: [
     { label: "Our Story", path: "/about" }, { label: "Mission & Vision", path: "/mission" },
     { label: "Our Approach", path: "/our-approach" }, { label: "Leadership", path: "/founder" },
-    { label: "Tende by DOE", path: "/tende" }, { label: "Media Features", path: "/media" }, { label: "Contact", path: "/contact" },
+    { label: "Tende by DOE", path: "/tende" }, { label: "Contact", path: "/contact" },
   ] },
   { label: "What We Do", path: "/what-we-do", links: [
     { label: "Explore What We Do", path: "/what-we-do" }, ...programs.slice(0, 7).map(p => ({ label: p.title, path: programPath(p.slug) })),
@@ -45,15 +45,16 @@ export const navigation = [
     { label: "Learn & Train", path: "/learn" }, { label: "Inclusive Education", path: "/what-we-do/inclusive-education" },
     { label: "Workplace Inclusion", path: "/what-we-do/workplace-inclusion" }, { label: "Technology & Accessibility", path: "/what-we-do/technology-accessibility" },
   ] },
-  { label: "Impact", path: "/impact", links: [
-    { label: "Impact & Evidence", path: "/impact" }, { label: "Past Events / Projects", path: "/projects" }, { label: "Media Features", path: "/media" },
+  { label: "Reports", path: "/impact", links: [
+    { label: "Impact Reports", path: "/impact" }, { label: "Media Features", path: "/media" },
   ] },
   { label: "Get Involved", path: "/get-involved", links: [
     { label: "Get Involved", path: "/get-involved" }, { label: "Partner With Us", path: "/partner" },
     { label: "Fund the Work", path: "/get-involved#fund-the-work" }, { label: "Volunteer", path: "/get-involved#volunteer" },
   ] },
   { label: "Events", path: "/events", links: [
-    { label: "Upcoming & Past Events", path: "/events" }, { label: "Past Events / Projects", path: "/projects" },
+    { label: "Upcoming Events", path: "/events" }, { label: "Past Events", path: "/events/past" },
+    { label: "Projects", path: "/projects" },
   ] },
 ];
 

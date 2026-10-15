@@ -45,7 +45,7 @@ const Inner = () => {
                 <details key={s.id} className="rounded-xl border border-border bg-card p-5">
                   <summary className="flex cursor-pointer flex-wrap items-center justify-between gap-3">
                     <div className="min-w-0">
-                      <span className="rounded-full bg-forest px-2 py-0.5 text-[10px] font-semibold uppercase text-cream">{s.form_source}</span>
+                      <span className="rounded-md bg-forest px-2 py-0.5 text-[10px] font-semibold uppercase text-cream">{s.form_source}</span>
                       <span className="ml-3 font-semibold text-foreground">{s.full_name}</span>
                       <span className="ml-2 text-sm text-muted-foreground">{s.email}</span>
                     </div>
