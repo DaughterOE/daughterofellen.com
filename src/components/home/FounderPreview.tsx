@@ -36,7 +36,7 @@ const FounderPreview = () => (
                 Eyvonne Eleko is the Founder and Chair of Daughter of Ellen, an Africa-focused initiative dedicated to building a continent-wide ecosystem of inclusion for neurodivergent individuals and people living with disabilities. Headquartered in both Dallas, Texas and Abuja, Nigeria, the initiative represents a bold and structured response to a critical gap in culturally informed support, policy, and community infrastructure across the African continent and within African diaspora communities.
               </p>
               <p>
-                Eyvonne is a strategist, aerospace program leader, public speaker, accessibility consultant and community architect whose work sits precisely at the convergence of lived experience, executive leadership, policy advocacy, and systemic change. Her approach is simultaneously rigorous and humane, combining the discipline of institutional governance with the depth of personal conviction.
+                Eyvonne is a strategist, public speaker, accessibility consultant and community architect whose work sits precisely at the convergence of lived experience, executive leadership, policy advocacy, and systemic change. Her approach is simultaneously rigorous and humane, combining the discipline of institutional governance with the depth of personal conviction.
               </p>
             </div>
             <Link
