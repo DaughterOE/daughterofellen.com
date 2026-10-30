@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import ScrollReveal from "@/components/ScrollReveal";
+import { Callout, ContentBand, ImageTextRow, PageHeading } from "@/components/InstitutionalLayout";
 
 const JoinTende = () => {
   const [loading, setLoading] = useState(false);
@@ -76,37 +77,19 @@ const JoinTende = () => {
 
   return (
     <main className="pt-24">
-      {/* HERO */}
-      <section className="section-padding relative overflow-hidden bg-primary">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-forest-light opacity-90" />
-        <div className="deco-orb right-0 top-0 h-96 w-96 bg-secondary opacity-[0.06]" />
-        <div className="relative mx-auto max-w-3xl text-center">
-          <ScrollReveal>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-secondary">
-              Tende by DOE
-            </p>
-            <h1 className="mt-4 font-heading text-4xl font-bold text-primary-foreground md:text-5xl">
-              Join the Tende Community
-            </h1>
-            <p className="mt-6 text-base leading-relaxed text-primary-foreground/80 md:text-lg">
-              A space for every person who is carrying more than they should carry alone. Come as you are. You are welcome here.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
+      <PageHeading title="Join the Tende Community" description="A space for every person who is carrying more than they should carry alone." parent={{ label: "Tende by DOE", path: "/tende" }} />
 
-      {/* FORM */}
-      <section className="section-padding relative overflow-hidden bg-background">
-        <div className="deco-orb -left-16 bottom-0 h-64 w-64 bg-forest-light" />
-        <div className="relative mx-auto max-w-2xl">
+      <ContentBand>
+        <ImageTextRow slot="join-tende.body1" title="Come as you are.">
+          <Callout>You are welcome here.</Callout>
+        </ImageTextRow>
+      </ContentBand>
+
+      <ContentBand tone="tint">
+        <div className="mx-auto max-w-2xl">
           {submitted ? (
             <ScrollReveal>
-              <div className="rounded-2xl border border-secondary/30 bg-card p-10 text-center md:p-14">
-                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-md bg-secondary/10">
-                  <svg className="h-8 w-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
+              <div className="rounded-md border border-secondary/30 bg-background p-10 text-center md:p-14">
                 <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
                   Thank you for joining Tende.
                 </h2>
@@ -117,7 +100,7 @@ const JoinTende = () => {
             </ScrollReveal>
           ) : (
             <ScrollReveal>
-              <form onSubmit={handleSubmit} className="rounded-2xl border border-border bg-card p-8 shadow-sm md:p-12">
+              <form onSubmit={handleSubmit} className="rounded-md border border-border bg-background p-8 md:p-12">
                 <h2 className="font-heading text-2xl font-bold text-foreground md:text-3xl">
                   Tell us about yourself
                 </h2>
@@ -216,7 +199,7 @@ const JoinTende = () => {
             </ScrollReveal>
           )}
         </div>
-      </section>
+      </ContentBand>
     </main>
   );
 };

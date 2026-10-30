@@ -7,3 +7,6 @@
 - Keep normal route scroll restoration instant and honor explicit section hashes, because involvement pathways link to distinct sections rather than the page top.
 - Retain the original hero video and a browser-compatible WebM derivative with pause and reduced-motion controls, because codec support and accessible motion must not remove existing media functionality.
 - Store static website images as real files in src/assets or public/images and reference them with Vite imports or public paths, because independent deployments must not depend on platform-specific image serving. Preserve backend-managed media storage integrations.
+- Build every inner page from the shared InstitutionalLayout template (image banner, alternating ContentBand tones, ImageTextRow, IconCards/NumberedSteps, Callout) and register its route in src/lib/pageConfig.ts, because the bottom CTA band and "You might also like" row render automatically from that config.
+- Reference inner page photos through named slots in src/lib/siteImages.ts (SiteImg/useSiteImage), because admins replace them from /admin/images via the site_images table without code changes.
+- Keep events, speakers and full event reports as typed data in src/lib/events.ts and render reports on /events/:slug#report, because homepage, events pages and Projects report buttons must stay in sync from one source.

@@ -2,7 +2,6 @@ import { useState } from "react";
 import ScrollReveal from "@/components/ScrollReveal";
 import susanMichael from "@/assets/susan-o-michael.jpeg";
 import sainabouManneh from "@/assets/sainabou-manneh.jpeg";
-import { ChevronDown, ChevronUp } from "lucide-react";
 
 interface TeamMember {
   name: string;
@@ -25,7 +24,7 @@ const team: TeamMember[] = [
           With a strong foundation in Agile and project management, she specializes in building scalable systems, optimizing organizational workflows, and leading high-performing teams to deliver measurable, impact-driven outcomes.
         </p>
         <p>
-          As Director of Operations at Daughter of Ellen, Sainabou leads the development and execution of strategic programs that support neurodivergent children and individuals with disabilities across Africa. She translates the organization's vision into structured, sustainable operations—strengthening early identification efforts, expanding community-based support, and enabling partnerships that drive long-term inclusion.
+          As Director of Operations at Daughter of Ellen, Sainabou leads the development and execution of strategic programs that support neurodivergent children and individuals with disabilities across Africa. She translates the organization's vision into structured, sustainable operations, strengthening early identification efforts, expanding community-based support, and enabling partnerships that drive long-term inclusion.
         </p>
         <p>
           She is deeply committed to advancing equitable systems and building inclusive ecosystems that empower underserved communities to thrive.
@@ -90,7 +89,6 @@ const TeamCard = ({ member, index }: { member: TeamMember; index: number }) => {
               aria-expanded={expanded}
             >
               {expanded ? "Read Less" : "Read More"}
-              {expanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
             </button>
           </div>
         </div>

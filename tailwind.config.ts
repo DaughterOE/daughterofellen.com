@@ -19,6 +19,7 @@ export default {
       },
       colors: {
         authority: { DEFAULT: "hsl(var(--authority))", foreground: "hsl(var(--authority-foreground))" },
+        tint: "hsl(var(--tint))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

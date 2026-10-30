@@ -7,7 +7,6 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
-import { Pencil, Trash2, Plus, X, Upload } from "lucide-react";
 
 type MediaFeature = {
   id: string;
@@ -116,10 +115,10 @@ const Inner = () => {
           <div className="flex items-center justify-between gap-4">
             <div>
               <h1 className="font-heading text-3xl font-bold text-foreground md:text-4xl">Manage Media Features</h1>
-              <p className="mt-2 text-sm text-muted-foreground">Add, edit, or remove items shown on the In the Media page.</p>
+              <p className="mt-2 text-sm text-muted-foreground">Add, edit, or remove items shown on the In the Media page. To change photos on other pages, use <a href="/admin/images" className="underline underline-offset-4">Page Images</a>.</p>
             </div>
             <Button onClick={() => setEditing({ ...blank })} className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
-              <Plus className="h-4 w-4" /> New Feature
+              New Feature
             </Button>
           </div>
 
@@ -142,8 +141,8 @@ const Inner = () => {
                   <h3 className="font-heading text-lg font-bold text-foreground">{it.feature_title}</h3>
                 </div>
                 <div className="flex gap-2">
-                  <Button variant="outline" size="sm" onClick={() => setEditing(it)}><Pencil className="h-4 w-4" /></Button>
-                  <Button variant="outline" size="sm" onClick={() => remove(it.id)}><Trash2 className="h-4 w-4" /></Button>
+                  <Button variant="outline" size="sm" onClick={() => setEditing(it)}>Edit</Button>
+                  <Button variant="outline" size="sm" onClick={() => remove(it.id)}>Delete</Button>
                 </div>
               </div>
             ))}
@@ -154,7 +153,7 @@ const Inner = () => {
               <div className="my-8 w-full max-w-2xl rounded-2xl bg-background p-6 max-h-[90vh] overflow-y-auto">
                 <div className="flex items-center justify-between">
                   <h2 className="font-heading text-xl font-bold">{editing.id ? "Edit" : "Add"} Media Feature</h2>
-                  <button onClick={() => setEditing(null)}><X className="h-5 w-5" /></button>
+                  <button onClick={() => setEditing(null)} className="text-sm font-semibold">Close</button>
                 </div>
                 <div className="mt-6 grid gap-4">
                   <div className="grid grid-cols-2 gap-3">
@@ -250,7 +249,6 @@ const FieldWithUpload = ({
     <div className="mt-1 flex gap-2">
       <Input value={(editing as any)[field] || ""} onChange={(e) => setEditing({ ...editing, [field]: e.target.value })} placeholder="Paste URL or upload" />
       <label className="inline-flex cursor-pointer items-center gap-1 rounded-md border border-input bg-background px-3 text-sm hover:bg-muted">
-        <Upload className="h-4 w-4" />
         {uploading === field ? "..." : "Upload"}
         <input type="file" accept={accept} className="hidden" onChange={(e) => e.target.files?.[0] && onUpload(field, e.target.files[0])} />
       </label>

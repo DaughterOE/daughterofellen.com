@@ -142,7 +142,7 @@ const ConferenceRegistrationForm = () => {
                 <Input id="email" type="email" required value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="mt-1" />
               </div>
               <div>
-                <Label htmlFor="phone">Phone Number — Call Line *</Label>
+                <Label htmlFor="phone">Phone Number (Call Line) *</Label>
                 <Input id="phone" type="tel" required value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} className="mt-1" />
               </div>
               <div className="flex items-center gap-2">

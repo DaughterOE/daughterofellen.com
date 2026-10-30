@@ -239,6 +239,27 @@ export type Database = {
         }
         Relationships: []
       }
+      site_images: {
+        Row: {
+          alt_text: string | null
+          image_url: string
+          slot: string
+          updated_at: string
+        }
+        Insert: {
+          alt_text?: string | null
+          image_url: string
+          slot: string
+          updated_at?: string
+        }
+        Update: {
+          alt_text?: string | null
+          image_url?: string
+          slot?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       suppressed_emails: {
         Row: {
           created_at: string

@@ -14,7 +14,7 @@ import Vision from "./pages/Vision";
 import Pillars from "./pages/Pillars";
 import Conference from "./pages/Conference";
 import Projects from "./pages/Projects";
-import Events, { PastEvents, EventDetail } from "./pages/Events";
+import Events, { PastEvents, EventDetail, EventReports } from "./pages/Events";
 import RedirectConference from "./pages/RedirectConference";
 import AbujaDeclaration from "./pages/AbujaDeclaration";
 import WhoShouldAttend from "./pages/WhoShouldAttend";
@@ -32,6 +32,8 @@ import AdminMedia from "./pages/AdminMedia";
 import AdminSubmissions from "./pages/AdminSubmissions";
 import Unsubscribe from "./pages/Unsubscribe";
 import NotFound from "./pages/NotFound";
+import AdminImages from "./pages/AdminImages";
+import { PageEnd } from "@/components/InstitutionalLayout";
 
 const queryClient = new QueryClient();
 
@@ -61,12 +63,16 @@ const App = () => (
           <Route path="/projects" element={<Projects />} />
           <Route path="/events" element={<Events />} />
           <Route path="/events/past" element={<PastEvents />} />
+          <Route path="/events/reports" element={<EventReports />} />
+          <Route path="/reports" element={<EventReports />} />
           <Route path="/events/:slug" element={<EventDetail />} />
           <Route path="/abuja-declaration" element={<AbujaDeclaration />} />
           <Route path="/who-should-attend" element={<WhoShouldAttend />} />
           <Route path="/founder" element={<Founder />} />
+          <Route path="/about/founder" element={<Founder />} />
           <Route path="/get-involved" element={<GetInvolved />} />
-          <Route path="/access-fund" element={<AccessFund />} />
+          <Route path="/projects/access-fund" element={<AccessFund />} />
+          <Route path="/access-fund" element={<Navigate to="/projects/access-fund" replace />} />
           <Route path="/partner" element={<Partner />} />
           <Route path="/community" element={<Community />} />
           <Route path="/contact" element={<Contact />} />
@@ -79,9 +85,11 @@ const App = () => (
           <Route path="/dashboard" element={<Navigate to="/admin/media" replace />} />
           <Route path="/admin/media" element={<AdminMedia />} />
           <Route path="/admin/submissions" element={<AdminSubmissions />} />
+          <Route path="/admin/images" element={<AdminImages />} />
           <Route path="/unsubscribe" element={<Unsubscribe />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <PageEnd />
         </div>
         <Footer />
       </BrowserRouter>

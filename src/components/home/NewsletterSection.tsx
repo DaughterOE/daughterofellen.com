@@ -4,7 +4,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { toast } from "@/hooks/use-toast";
 import { submitForm } from "@/lib/submitForm";
 
-const NewsletterSection = () => {
+export const NewsletterForm = ({ className = "mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center" }: { className?: string }) => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -27,19 +27,7 @@ const NewsletterSection = () => {
   };
 
   return (
-    <section className="section-padding relative overflow-hidden bg-card">
-      <div className="deco-orb right-0 bottom-0 h-56 w-56 bg-forest-light" />
-      <div className="relative mx-auto max-w-2xl text-center">
-        <ScrollReveal>
-          <h2 className="mb-4 font-heading text-3xl font-bold text-foreground md:text-4xl">
-            Stay Connected.
-          </h2>
-          <p className="mx-auto max-w-xl text-base leading-relaxed text-muted-foreground">
-            Get practical inclusion resources, DOE updates and upcoming training.
-          </p>
-        </ScrollReveal>
-        <ScrollReveal delay={200}>
-          <form onSubmit={handleSubmit} className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <form onSubmit={handleSubmit} className={className}>
             <label htmlFor="newsletter-email" className="sr-only">Email address</label>
             <input
               id="newsletter-email"
@@ -58,6 +46,24 @@ const NewsletterSection = () => {
               {loading ? "..." : "Subscribe"}
             </Button>
           </form>
+  );
+};
+
+const NewsletterSection = () => {
+  return (
+    <section className="section-padding relative overflow-hidden bg-card">
+      <div className="deco-orb right-0 bottom-0 h-56 w-56 bg-forest-light" />
+      <div className="relative mx-auto max-w-2xl text-center">
+        <ScrollReveal>
+          <h2 className="mb-4 font-heading text-3xl font-bold text-foreground md:text-4xl">
+            Stay Connected.
+          </h2>
+          <p className="mx-auto max-w-xl text-base leading-relaxed text-muted-foreground">
+            Get practical inclusion resources, DOE updates and upcoming training.
+          </p>
+        </ScrollReveal>
+        <ScrollReveal delay={200}>
+          <NewsletterForm />
         </ScrollReveal>
       </div>
     </section>

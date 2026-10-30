@@ -39,6 +39,7 @@
     --lightbox-foreground: 0 0% 100%;
     --authority: 152.609 45.098% 20%;
     --authority-foreground: 37.5 44.444% 96.471%;
+    --tint: 150 32% 93%;
 
     --gold: 39.021 56.972% 50.784%;
     --gold-light: 37 65% 71%;
@@ -95,6 +96,7 @@
     --input: 150 15% 18%;
     --ring: 37 40% 42%;
 
+    --tint: 150 24% 11%;
     --gold: 37 40% 42%;
     --gold-light: 37 35% 55%;
     --gold-glow: 37 45% 48%;
@@ -160,7 +162,15 @@
   }
 
   .section-padding {
-    @apply px-6 py-20 md:px-12 lg:px-24 lg:py-28;
+    @apply px-6 py-10 md:px-12 md:py-16 lg:px-24;
+  }
+
+  .page-hero-scrim {
+    background: linear-gradient(100deg, hsl(var(--authority) / 0.92) 0%, hsl(var(--authority) / 0.8) 50%, hsl(var(--authority) / 0.62) 100%);
+  }
+
+  .section-compact {
+    @apply px-6 py-10 md:px-12 md:py-16 lg:px-24;
   }
 
   .gold-underline {
@@ -256,7 +266,7 @@
 }
 @layer components {
   .deco-orb { display: none; }
-  .hero-scrim { background: linear-gradient(100deg, hsl(0 0% 0% / 0.78) 0%, hsl(0 0% 0% / 0.62) 48%, hsl(0 0% 0% / 0.4) 100%); }
+  .hero-scrim { background: linear-gradient(100deg, hsl(var(--authority) / 0.9) 0%, hsl(var(--authority) / 0.78) 50%, hsl(var(--authority) / 0.6) 100%); }
   .gold-glow, .gold-glow-hover:hover { box-shadow: none; }
 }
 @media (prefers-reduced-motion: reduce) {

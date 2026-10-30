@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import ScrollReveal from "@/components/ScrollReveal";
+import { ActionLink, Callout, ContentBand, TextCards, ImageTextRow, PageHeading } from "@/components/InstitutionalLayout";
 
 const audiences = [
   {
@@ -38,63 +37,22 @@ const audiences = [
 
 const WhoShouldAttend = () => (
   <main className="pt-24">
-    {/* HEADER */}
-    <section className="section-padding relative overflow-hidden bg-background">
-      <div className="deco-orb -right-24 top-0 h-72 w-72 bg-secondary" />
-      <div className="relative mx-auto max-w-3xl">
-        <ScrollReveal>
-          <h1 className="font-heading text-4xl font-bold text-foreground md:text-5xl">Who Should Attend</h1>
-          <div className="mt-2 h-1 w-16 rounded-md bg-secondary" />
-        </ScrollReveal>
-        <ScrollReveal delay={200}>
-          <p className="mt-10 text-base leading-relaxed text-muted-foreground">
-            The Daughter of Ellen Conference is designed for everyone who believes that neurodivergent children and adults deserve better. That means this event is for you, regardless of your role or your starting point.
-          </p>
-        </ScrollReveal>
-      </div>
-    </section>
+    <PageHeading title="Who Should Attend" description="The Daughter of Ellen Conference is designed for everyone who believes that neurodivergent children and adults deserve better." parent={{ label: "Events", path: "/events" }} />
 
-    {/* AUDIENCE CARDS */}
-    <section className="section-padding relative overflow-hidden bg-card">
-      <div className="deco-orb left-0 bottom-0 h-64 w-64 bg-forest-light" />
-      <div className="relative mx-auto max-w-4xl">
-        <div className="grid gap-6 sm:grid-cols-2">
-          {audiences.map((audience, i) => (
-            <ScrollReveal key={i} delay={i * 80}>
-              <div className="rounded-xl border border-border bg-background p-6 transition-all duration-500 hover:border-secondary hover:-translate-y-1 h-full">
-                <h3 className="font-heading text-lg font-semibold text-foreground">{audience.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{audience.desc}</p>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-      </div>
-    </section>
+    <ContentBand>
+      <ImageTextRow slot="who-should-attend.body1">
+        <Callout>That means this event is for you, regardless of your role or your starting point.</Callout>
+      </ImageTextRow>
+    </ContentBand>
 
-    {/* CTA */}
-    <section className="section-padding relative overflow-hidden bg-primary">
-      <div className="noise-overlay absolute inset-0" />
-      <div className="relative mx-auto max-w-xl text-center">
-        <ScrollReveal>
-          <h2 className="mb-4 font-heading text-3xl font-bold text-primary-foreground md:text-4xl">
-            Register Now
-          </h2>
-          <p className="text-primary-foreground/80">
-            Places are limited. Secure yours today.
-          </p>
-          <div className="mt-8">
-            <a
-              href="https://event.getbookt.io/living-it-inclusion-accessibility-stigma-and-the-search-for-support"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block rounded-md bg-secondary px-10 py-4 font-body text-sm font-semibold text-secondary-foreground transition-all duration-300"
-            >
-              Register for the Webinar
-            </a>
-          </div>
-        </ScrollReveal>
-      </div>
-    </section>
+    <ContentBand tone="tint">
+      <TextCards columns={2} items={audiences.map((audience, i) => ({ title: audience.title, description: audience.desc }))} />
+    </ContentBand>
+
+    <ContentBand title="Register Now" tone="muted">
+      <p className="text-lg leading-relaxed text-muted-foreground">Places are limited. Secure yours today.</p>
+      <div className="mt-6"><ActionLink to="https://event.getbookt.io/living-it-inclusion-accessibility-stigma-and-the-search-for-support">Register for the Webinar</ActionLink></div>
+    </ContentBand>
   </main>
 );
 

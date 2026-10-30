@@ -7,7 +7,6 @@ import familyImage from "@/assets/hero-family.jpg";
 import highFiveImage from "@/assets/hero-students-highfive.jpg";
 import lawnImage from "@/assets/hero-students-lawn.jpg";
 import { useEffect, useRef, useState } from "react";
-import { Pause, Play } from "lucide-react";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 
@@ -101,7 +100,7 @@ const HeroSection = () => {
         )}
       />)}
     </div>
-    <Button variant="outline" size="icon" onClick={() => setPaused(!paused)} aria-label={paused ? "Play background video" : "Pause background video"} title={paused ? "Play background video" : "Pause background video"}>{paused ? <Play /> : <Pause />}</Button>
+    <Button variant="outline" size="sm" className="border-authority-foreground/60 text-xs text-authority-foreground hover:bg-authority-foreground/10" onClick={() => setPaused(!paused)} aria-label={paused ? "Play background video" : "Pause background video"} title={paused ? "Play background video" : "Pause background video"}>{paused ? "Play" : "Pause"}</Button>
   </div>
 </section>;
 };

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import ScrollReveal from "@/components/ScrollReveal";
-import { Radio, Tv, FileText, Globe, Play, Headphones, ExternalLink } from "lucide-react";
+import { Callout, ContentBand, ImageTextRow, PageHeading } from "@/components/InstitutionalLayout";
 
 type MediaFeature = {
   id: string;
@@ -16,11 +16,11 @@ type MediaFeature = {
   feature_date: string | null;
 };
 
-const TYPE_META: Record<string, { label: string; icon: any; badgeClass: string }> = {
-  radio: { label: "Radio", icon: Radio, badgeClass: "bg-forest text-cream" },
-  tv: { label: "TV", icon: Tv, badgeClass: "bg-[#FF0000] text-white" },
-  print: { label: "Print", icon: FileText, badgeClass: "bg-secondary text-secondary-foreground" },
-  online: { label: "Online", icon: Globe, badgeClass: "bg-forest-light text-cream" },
+const TYPE_META: Record<string, { label: string; badgeClass: string }> = {
+  radio: { label: "Radio", badgeClass: "bg-forest text-cream" },
+  tv: { label: "TV", badgeClass: "bg-destructive text-destructive-foreground" },
+  print: { label: "Print", badgeClass: "bg-secondary text-secondary-foreground" },
+  online: { label: "Online", badgeClass: "bg-forest-light text-cream" },
 };
 
 const Media = () => {
@@ -43,28 +43,17 @@ const Media = () => {
 
   return (
     <main className="pt-24">
-      {/* HERO */}
-      <section className="section-padding relative overflow-hidden bg-primary">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-forest-light opacity-90" />
-        <div className="deco-orb right-0 top-0 h-96 w-96 bg-secondary opacity-[0.07]" />
-        <div className="relative mx-auto max-w-3xl text-center">
-          <ScrollReveal>
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-secondary">
-              Press &amp; Media
-            </p>
-            <h1 className="mt-4 font-heading text-4xl font-bold text-primary-foreground md:text-5xl lg:text-6xl">
-              In the Media
-            </h1>
-            <p className="mt-6 text-base leading-relaxed text-primary-foreground/85 md:text-lg">
-              Explore Daughter of Ellen's features across radio, television, print, and digital platforms.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
+      <PageHeading title="In the Media" description="Explore Daughter of Ellen's features across radio, television, print, and digital platforms." parent={{ label: "Reports", path: "/impact" }} />
+
+      <ContentBand>
+        <ImageTextRow slot="media.body1" title="Press &amp; Media">
+          <Callout>Explore Daughter of Ellen's features across radio, television, print, and digital platforms.</Callout>
+        </ImageTextRow>
+      </ContentBand>
 
       {/* GRID */}
-      <section className="section-padding bg-background">
-        <div className="mx-auto max-w-7xl">
+      <section className="section-padding bg-tint">
+        <div className="mx-auto max-w-[1200px]">
           {loading ? (
             <p className="text-center text-muted-foreground">Loading features...</p>
           ) : items.length === 0 ? (
@@ -90,7 +79,6 @@ const Media = () => {
 
 const MediaCard = ({ item }: { item: MediaFeature }) => {
   const meta = TYPE_META[item.media_type];
-  const Icon = meta.icon;
 
   const button = renderButton(item);
 
@@ -106,11 +94,10 @@ const MediaCard = ({ item }: { item: MediaFeature }) => {
           />
         ) : (
           <div className="flex aspect-[16/9] h-full w-full items-center justify-center bg-gradient-to-br from-forest to-forest-light">
-            <Icon className="h-12 w-12 text-secondary" />
+            <span className="font-heading text-2xl text-secondary">{meta.label}</span>
           </div>
         )}
         <span className={`absolute left-3 top-3 inline-flex items-center gap-1 rounded-md px-3 py-1 text-xs font-semibold ${meta.badgeClass}`}>
-          <Icon className="h-3 w-3" />
           {meta.label}
         </span>
       </div>
@@ -177,7 +164,7 @@ function renderButton(item: MediaFeature) {
         <a href={item.video_url} target="_blank" rel="noreferrer"
           className={`${baseClasses} text-white`}
           style={{ backgroundColor: "#FF0000" }}>
-          <Play className="h-4 w-4" /> Watch on YouTube
+          Watch on YouTube
         </a>
       </div>
     );
@@ -190,7 +177,7 @@ function renderButton(item: MediaFeature) {
         </audio>
         <a href={item.audio_url} target="_blank" rel="noreferrer"
           className={`${baseClasses} bg-forest text-cream`}>
-          <Headphones className="h-4 w-4" /> Listen to Feature
+          Listen to Feature
         </a>
       </div>
     );
@@ -199,7 +186,7 @@ function renderButton(item: MediaFeature) {
     return (
       <a href={item.article_url} target="_blank" rel="noreferrer"
         className={`${baseClasses} bg-secondary text-secondary-foreground`}>
-        <FileText className="h-4 w-4" /> Read Feature
+        Read Feature
       </a>
     );
   }
@@ -208,7 +195,7 @@ function renderButton(item: MediaFeature) {
     return (
       <a href={fallbackUrl} target="_blank" rel="noreferrer"
         className={`${baseClasses} bg-forest text-cream`}>
-        <ExternalLink className="h-4 w-4" /> View Feature
+        View Feature
       </a>
     );
   }

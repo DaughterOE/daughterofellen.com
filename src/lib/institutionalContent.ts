@@ -3,9 +3,9 @@ export const brand = {
   descriptor: "Advancing neurodiversity, disability inclusion and accessibility through education, technology, community and systems change.",
   support: "We work with individuals, families, educators, employers, communities and institutions to build environments where difference is understood, access is intentional and people can participate fully.",
   thesis: "Inclusion should not depend on individuals repeatedly asking to be accommodated. It should be designed into classrooms, technologies, workplaces, communities and public systems from the beginning.",
-  technology: "Technology can remove barriers - or reproduce them. DOE works at the intersection of EdTech, assistive technology, artificial intelligence and accessible design to help schools, workplaces and communities use technology in ways that expand participation rather than exclusion.",
+  technology: "Technology can remove barriers, or reproduce them. DOE works at the intersection of EdTech, assistive technology, artificial intelligence and accessible design to help schools, workplaces and communities use technology in ways that expand participation rather than exclusion.",
   services: "DOE works with schools, employers and institutions to strengthen inclusive practice through training, accessibility-focused education and practical implementation support. Programs can be adapted for educators, HR teams, managers and cross-functional institutional audiences.",
-  adult: "A community for neurodivergent adults - including people who are diagnosed, self-identifying or still exploring their neurodivergence - to connect, learn, share experiences and access practical resources without judgment.",
+  adult: "A community for neurodivergent adults, including people who are diagnosed, self-identifying or still exploring their neurodivergence, to connect, learn, share experiences and access practical resources without judgment.",
 };
 
 export const foundations = [
@@ -18,15 +18,18 @@ export const programs = [
   { slug: "family-support", title: "Early Identification & Family Support", shortTitle: "Family Support", description: "Information, practical resources, referrals and community for families navigating developmental, disability and neurodiversity needs." },
   { slug: "inclusive-education", title: "Inclusive Education", shortTitle: "Inclusive Education", description: "Training and tools that help schools and educators build classrooms where more learners can participate and thrive." },
   { slug: "technology-accessibility", title: "Technology & Accessibility", shortTitle: "Technology & Accessibility", description: "Using EdTech, assistive technology, AI and accessible design to reduce barriers and expand participation." },
-  { slug: "adult-community", title: "Adult Community", shortTitle: "Adult Community", description: "A community for neurodivergent adults - including people who are diagnosed, self-identifying or still exploring their neurodivergence - to connect, learn and access resources without judgment." },
+  { slug: "adult-community", title: "Adult Community", shortTitle: "Adult Community", description: "A community for neurodivergent adults, including people who are diagnosed, self-identifying or still exploring their neurodivergence, to connect, learn and access resources without judgment." },
   { slug: "workplace-inclusion", title: "Workplace Inclusion", shortTitle: "Workplace Inclusion", description: "Training and advisory support for employers building more accessible, neuroinclusive and disability-inclusive workplaces." },
   { slug: "access-fund", title: "Access Fund", shortTitle: "Access Fund", description: "Needs-based support for eligible individuals and families facing barriers to disability and neurodiversity-related services, assessments, assistive technology, educational support and other accessibility needs." },
   { slug: "advocacy-policy", title: "Advocacy & Policy", shortTitle: "Advocacy & Policy", description: "Public education, institutional engagement and policy work aimed at moving inclusion from aspiration to lived reality." },
   { slug: "research-evidence", title: "Research & Evidence", shortTitle: "Research & Evidence", description: "Tracking outcomes, publishing what DOE learns and strengthening the evidence base for inclusive practice in African contexts." },
 ];
 
+/** Program areas listed under What We Do. The Access Fund is a project, not a service. */
+export const deliveryAreas = programs.filter(p => p.slug !== "access-fund");
+
 export function programPath(slug: string) {
-  if (slug === "access-fund") return "/access-fund";
+  if (slug === "access-fund") return "/projects/access-fund";
   if (slug === "advocacy-policy") return "/abuja-declaration";
   if (slug === "research-evidence") return "/impact";
   return `/what-we-do/${slug}`;
@@ -39,14 +42,14 @@ export const navigation = [
     { label: "Tende by DOE", path: "/tende" }, { label: "Contact", path: "/contact" },
   ] },
   { label: "What We Do", path: "/what-we-do", links: [
-    { label: "Explore What We Do", path: "/what-we-do" }, ...programs.slice(0, 7).map(p => ({ label: p.title, path: programPath(p.slug) })),
+    { label: "Explore What We Do", path: "/what-we-do" }, ...deliveryAreas.filter(p => p.slug !== "research-evidence").map(p => ({ label: p.title, path: programPath(p.slug) })),
   ] },
   { label: "Learn", path: "/learn", links: [
     { label: "Learn & Train", path: "/learn" }, { label: "Inclusive Education", path: "/what-we-do/inclusive-education" },
     { label: "Workplace Inclusion", path: "/what-we-do/workplace-inclusion" }, { label: "Technology & Accessibility", path: "/what-we-do/technology-accessibility" },
   ] },
   { label: "Reports", path: "/impact", links: [
-    { label: "Impact Reports", path: "/impact" }, { label: "Media Features", path: "/media" },
+    { label: "Event Reports", path: "/events/reports" }, { label: "Impact Reports", path: "/impact" }, { label: "Media Features", path: "/media" },
   ] },
   { label: "Get Involved", path: "/get-involved", links: [
     { label: "Get Involved", path: "/get-involved" }, { label: "Partner With Us", path: "/partner" },
@@ -54,8 +57,14 @@ export const navigation = [
   ] },
   { label: "Events", path: "/events", links: [
     { label: "Upcoming Events", path: "/events" }, { label: "Past Events", path: "/events/past" },
-    { label: "Projects", path: "/projects" },
+    { label: "Event Reports", path: "/events/reports" },
+  ] },
+  { label: "Projects", path: "/projects", links: [
+    { label: "Our Projects", path: "/projects" }, { label: "DOE Access Fund", path: "/projects/access-fund" },
+    { label: "Abuja Declaration", path: "/abuja-declaration" }, { label: "Lagos Awareness Walk", path: "/events/lagos-awareness-walk" },
   ] },
 ];
+
+export const volunteerUrl = "https://doe-serve-connect.base44.app/";
 
 export const communityUrl = "https://chat.whatsapp.com/GsfURXWU8fK6EnWHG8x2CW";

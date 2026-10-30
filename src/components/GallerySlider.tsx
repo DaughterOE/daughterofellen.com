@@ -8,7 +8,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 type Img = string;
 
@@ -63,12 +62,12 @@ const GallerySlider = ({ images, alt }: GallerySliderProps) => {
               <div className="relative w-full max-w-6xl">
                 <img src={images[lightboxIndex]} alt={`${alt}, photo ${lightboxIndex + 1} of ${images.length}`} className="mx-auto max-h-[85vh] w-auto rounded-md object-contain" />
                 {images.length > 1 && <>
-                  <button type="button" aria-label="Previous photo" onClick={() => setLightboxIndex((lightboxIndex - 1 + images.length) % images.length)} className="absolute left-0 top-1/2 -translate-y-1/2 rounded-md bg-lightbox/60 p-3 text-lightbox-foreground hover:bg-lightbox md:-left-14"><ChevronLeft /></button>
-                  <button type="button" aria-label="Next photo" onClick={() => setLightboxIndex((lightboxIndex + 1) % images.length)} className="absolute right-0 top-1/2 -translate-y-1/2 rounded-md bg-lightbox/60 p-3 text-lightbox-foreground hover:bg-lightbox md:-right-14"><ChevronRight /></button>
+                  <button type="button" aria-label="Previous photo" onClick={() => setLightboxIndex((lightboxIndex - 1 + images.length) % images.length)} className="absolute left-0 top-1/2 -translate-y-1/2 rounded-md bg-lightbox/60 p-3 text-lightbox-foreground hover:bg-lightbox md:-left-14"><span className="text-sm font-semibold">Previous</span></button>
+                  <button type="button" aria-label="Next photo" onClick={() => setLightboxIndex((lightboxIndex + 1) % images.length)} className="absolute right-0 top-1/2 -translate-y-1/2 rounded-md bg-lightbox/60 p-3 text-lightbox-foreground hover:bg-lightbox md:-right-14"><span className="text-sm font-semibold">Next</span></button>
                 </>}
               </div>
             )}
-            <DialogPrimitive.Close aria-label="Close photo" className="fixed right-4 top-4 rounded-md p-3 text-lightbox-foreground hover:bg-lightbox"><X /></DialogPrimitive.Close>
+            <DialogPrimitive.Close aria-label="Close photo" className="fixed right-4 top-4 rounded-md p-3 text-lightbox-foreground hover:bg-lightbox"><span className="text-sm font-semibold">Close</span></DialogPrimitive.Close>
           </DialogPrimitive.Content>
         </DialogPrimitive.Portal>
       </DialogPrimitive.Root>
