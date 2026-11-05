@@ -64,6 +64,7 @@ const ReportBody = ({ report }: { report: EventReport }) => <div className="max-
         </li>);
         return section.ordered ? <ol className="list-decimal space-y-2 pl-6">{items}</ol> : <ul className="list-disc space-y-2 pl-6">{items}</ul>;
       })()}
+      {section.afterItems?.map((p, i) => <p key={`a${i}`}>{p}</p>)}
     </div>
   </section>)}
 </div>;

@@ -28,105 +28,157 @@ export type DoeEvent = {
 export const reportPath = (slug: string) => `/events/${slug}#report`;
 
 const aiReport: EventReport = {
-  title: "AI for Accessibility: Building Inclusive Solutions for the Future",
-  details: [["Date", "7th August 2026"], ["Format", "Virtual Webinar"], ["Time", "6 pm to 8 pm WAT"], ["Participants", "366"], ["Prepared By", "Bethel Amurawaiye"]],
+  title: "A Report On AI for Accessibility: Building Inclusive Solutions for the Future",
+  details: [["Date", "7th August 2026"], ["Format", "Virtual Webinar"], ["Time", "6 pm - 9pm WAT"], ["Participants", "366"], ["Prepared By", "Bethel Amurawaiye"]],
   sections: [
-    { heading: "Overview", paragraphs: [
-      "As part of Daughter of Ellen's commitment to inclusive skills-building, the organisation hosted a virtual AI Empowerment Masterclass in partnership with Lola Adey of Vibe Code Africa. The session was designed for the general public, including neurodivergent participants, and introduced foundational AI literacy alongside practical, hands-on use of AI tools in an accessible and supportive format.",
-      "The session reflected DOE's broader commitment to building practical, future-relevant skills and expanding opportunities within the neurodivergent community.",
+    { heading: "Executive summary", paragraphs: [
+      "On 7 August 2026, Daughter of Ellen Support and Empowerment Initiative (DOE), in partnership with Nard AI, hosted a virtual masterclass on artificial intelligence (AI) and its potential applications in learning, communication, productivity and accessibility.",
+      "The session was designed primarily for professionals and learners working or studying in education and related fields, including educators, special educators, students, neurodivergent professionals and people interested in supporting neurodivergent learners and colleagues. It combined foundational instruction with guided, hands-on practice in an accessible and supportive learning environment. A total of 366 participants attended.",
+      "The masterclass advanced DOE’s commitment to practical, future-relevant skills-building. It explored how AI tools may support diverse ways of learning, communicating and working, and how educators and professionals might apply them in educational and workplace settings. Participants received certificates of participation following the session.",
     ] },
-    { heading: "Objectives", ordered: true, items: [
-      { lead: "Introduce practical AI literacy", text: "by equipping participants with a foundational, accessible understanding of AI tools and how they work." },
-      { lead: "Demystify AI for everyday and professional use", text: "by showing participants how AI tools can support learning, communication, and productivity in ways suited to diverse cognitive styles." },
-      { lead: "Build confidence with hands-on practice", text: "by giving participants direct, guided experience using AI tools in a low-pressure, supportive environment." },
-      { lead: "Promote inclusive tech adoption:", text: "Position AI as an accessibility enabler, not just a productivity tool, for neurodivergent individuals." },
-      { lead: "Support DOE's broader empowerment mandate", text: "by Tying the session to its mission of building skills and opportunity within the neurodivergent community." },
+    { heading: "Background and purpose", paragraphs: [
+      "AI tools are increasingly used across education, work and everyday life. For educators and students, these tools may offer new ways to engage with information, organise tasks, communicate ideas and support learning. For neurodivergent professionals, AI may also help with tasks such as planning, drafting, summarising and managing information, depending on the person’s needs and the tool being used.",
+      "At the same time, people need opportunities to become familiar with these technologies and consider how to use them thoughtfully. DOE organised the masterclass to provide accessible instruction and direct practice, with particular attention to educators, special educators, students and neurodivergent professionals. The session supported DOE’s wider focus on expanding skills and opportunities while encouraging more inclusive approaches to technology use.",
     ] },
-    { heading: "Summary", paragraphs: [
-      "The masterclass met its objectives by combining accessible instruction with practical, guided use of AI tools, giving participants both the confidence and the context to see AI as an enabler of independence rather than a barrier. The session reinforces DOE's continued investment in equipping the neurodivergent community with future-relevant digital skills, and strengthens DOE's partnership with Vibe Code Africa for future collaborative programming.",
+    { heading: "Objectives", paragraphs: ["The masterclass aimed to:"], ordered: true, items: [
+      { text: "Introduce participants to foundational AI concepts and practical AI tools." },
+      { text: "Demonstrate how AI tools may support learning, communication and productivity in educational, professional and everyday settings." },
+      { text: "Build familiarity through guided, hands-on participation." },
+      { text: "Explore potential applications of AI for neurodivergent learners, educators and professionals with diverse cognitive styles." },
+      { text: "Encourage educators and other professionals to consider how AI tools might support inclusive practice." },
+      { text: "Advance DOE’s commitment to skills development and opportunity for neurodivergent people and the wider community." },
     ] },
-    { heading: "Participant Engagement", paragraphs: [
-      "Participants actively engaged throughout the session through questions, reflections, and practical participation. The level of engagement demonstrated strong interest in gaining a practical understanding of AI and in having continued opportunities to learn from professionals and apply new skills to personal and professional development.",
+    { heading: "Programme and facilitation", paragraphs: ["The three-hour virtual session brought together inclusion-focused facilitation and technical expertise."] },
+    { heading: "Facilitators", items: [
+      { text: "Eyvonne Eleko, Founder, Daughter of Ellen Support and Empowerment Initiative" },
+      { text: "Lola Adey, Founder, Nard AI and Vibe Code Africa" },
+    ], afterItems: [
+      "The programme introduced participants to AI tools and their potential uses through practical examples and guided activities. It was structured to support participants with different levels of familiarity with AI and to make the subject approachable. Examples and discussion focused on how AI could be explored in learning and teaching, communication, productivity and professional work.",
+    ] },
+    { heading: "Participation and engagement", paragraphs: [
+      "A total of 366 participants attended the webinar. Participants engaged through questions, reflections and practical participation, demonstrating interest in learning about AI and considering its relevance to education, professional practice and personal development.",
       "Following the workshop, participants received certificates of participation for their portfolios.",
     ] },
-    { heading: "Key Outcomes", items: [
-      { text: "Participants left with a working understanding of what AI tools are and how to use them, reducing the intimidation factor often associated with new tech." },
-      { text: "Participants saw concrete examples of AI supporting learning, communication, and productivity, making the tools feel relevant to their own routines and work." },
-      { text: "Direct, guided practice gave participants real experience using AI tools themselves, rather than just observing, building comfort through repetition in a safe setting." },
-      { text: "Participants began to see AI as an accessibility tool that can support neurodivergent ways of working, not just a generic productivity add-on." },
-      { text: "The session strengthened DOE's positioning as a hands-on skills-builder for the neurodivergent community, and deepened the working relationship with Vibe Code Africa." },
+    { heading: "Key outcomes", paragraphs: ["The session:"], items: [
+      { text: "Introduced participants to AI tools and practical ways they may be used." },
+      { text: "Presented examples of potential AI applications in learning, communication and productivity." },
+      { text: "Gave participants an opportunity to practise using AI tools with guidance." },
+      { text: "Created space for educators, special educators, students and neurodivergent professionals to consider how AI might support their work, learning and participation." },
+      { text: "Encouraged participants to consider how AI tools may be adapted to different learning and working needs." },
+      { text: "Strengthened collaboration between DOE and Nard AI on technology-focused learning." },
+    ] },
+    { heading: "Alignment with DOE’s programmes", paragraphs: [
+      "The masterclass aligned with DOE’s Education / Education & Technology programme category. Its focus on practical AI literacy and accessible technology use connected directly to DOE’s education and technology work. By bringing together educators, special educators, students and neurodivergent professionals, the session created space to explore how AI tools might support learning, teaching, communication and participation.",
+      "The programme also reflected DOE’s broader commitment to skills development and opportunity for neurodivergent people. It encouraged participants to consider emerging technology in relation to diverse learning and working needs.",
+    ] },
+    { heading: "Contribution to DOE’s work", paragraphs: [
+      "The masterclass extended DOE’s inclusive skills-building work into AI literacy. By pairing accessible instruction with practical engagement, the session gave participants an opportunity to become more familiar with AI tools and consider how they might apply them to their own learning, teaching and professional needs.",
+      "The programme also reflected DOE’s commitment to ensuring that conversations about technology and opportunity include neurodivergent people. Its emphasis on educators, students and professionals brought attention to the different contexts in which AI may support participation, while keeping accessibility and inclusion within the discussion.",
     ] },
     { heading: "Conclusion", paragraphs: [
-      "The AI Empowerment Masterclass achieved its core objective of providing participants with an accessible and practical introduction to AI while presenting the technology as a potential tool for greater independence and inclusion.",
-      "The partnership with Vibe Code Africa complemented DOE's inclusion-focused approach with technical facilitation and created an opportunity for future collaborative programming. The session further supports DOE's broader commitment to building practical, future-relevant skills and expanding opportunities for the community it serves.",
+      "The AI for Accessibility masterclass provided 366 participants with an introduction to AI and an opportunity to explore its practical applications. With particular relevance to educators, special educators, students and neurodivergent professionals, the session advanced DOE’s efforts to build future-relevant skills and encourage more inclusive engagement with emerging technologies.",
+      "Through its collaboration with Nard AI, DOE delivered a programme connecting inclusion-focused learning with technical facilitation. The masterclass contributed to DOE’s Education / Education & Technology programme category. DOE will continue to explore opportunities that build digital skills and promote more inclusive use of technology.",
     ] },
   ],
 };
 
 const lagosWalkReport: EventReport = {
-  title: "Lagos Awareness Walk Report",
-  details: [["Theme", "Walk for Neurodiversity & Disability Inclusion"], ["Date", "6th June 2026"], ["Route", "Johnson Jakande Tinubu Park (JJT) to City View Hotel (Taiwo Close), Ikeja, and back to JJT"], ["Time", "9 am to 12 noon"], ["Report Prepared By", "Bethel Irumudomon"]],
+  title: "Lagos/Abuja Awareness Walk Report",
+  details: [["Theme", "Walk for Neurodiversity and Disability Inclusion"], ["Location and Date", "Abuja and Lagos | 1 and 6 June 2026"]],
   sections: [
-    { heading: "Summary", paragraphs: [
-      "The awareness walk was organised with two key objectives: to raise awareness that persons with disabilities and neurodivergent Nigerians deserve visibility, dignity, understanding, and inclusion, and to promote the importance of early identification and intervention.",
-      "The walk focused on key themes including inclusion and accessibility, understanding disability and neurodivergence, the importance of early support, and how to challenge stigma while reshaping cultural narratives around disability in Nigeria. The active engagement phase of the walk lasted approximately one hour within the 3-hour programme.",
+    { heading: "Activity overview", paragraphs: [
+      "Daughter of Ellen Support and Empowerment Initiative (DOE) organised awareness walks in Abuja and Lagos to advance public understanding of neurodiversity, disability inclusion and the importance of early identification and support.",
+      "The walks called for the visibility, dignity and inclusion of persons with disabilities and neurodivergent people in Nigeria. They also created opportunities to engage residents, stakeholders and members of the public on the barriers people face and the role communities can play in challenging stigma.",
+      "More than 100 people attended across the two locations.",
     ] },
-    { heading: "Audience", items: [{ lead: "Initial projection:", text: "30 participants" }, { lead: "Actual attendance:", text: "53 participants" }] },
-    { heading: "Media coverage", paragraphs: ["Four media houses covered the event:"], ordered: true, items: [
-      { lead: "Punch Newspaper:", text: "Punch news", href: "https://punchng.com/ngo-calls-for-stronger-support-inclusion-for-neurodivergent-children/" },
-      { lead: "The Nigerian Tribune:", text: "Tribune news", href: "https://tribuneonlineng.com/stakeholders-advocate-inclusive-education-for-children-with-special-needs/" },
+    { heading: "Objectives and key messages", paragraphs: ["The activity focused on four connected themes:"], items: [
+      { lead: "Inclusion and accessibility:", text: "Promoting environments and communities where persons with disabilities and neurodivergent people can participate." },
+      { lead: "Understanding disability and neurodivergence:", text: "Encouraging informed, respectful public engagement." },
+      { lead: "Early identification and support:", text: "Highlighting the importance of timely access to appropriate support." },
+      { lead: "Challenging stigma:", text: "Encouraging communities to question harmful assumptions and reshape cultural narratives around disability in Nigeria." },
+    ] },
+    { heading: "Community engagement and participation", paragraphs: [
+      "The turnout exceeded DOE’s initial projection and demonstrated community interest in disability inclusion and neurodiversity. Through direct engagement during the walks, the campaign brought its key messages into public spaces and invited residents and other stakeholders to take part in the conversation.",
+      "Several participants expressed interest in volunteering and supporting future initiatives. This provides a foundation for continued community engagement and follow-up.",
+    ] },
+    { heading: "Media coverage", paragraphs: ["The walks received coverage from four media organisations:"], items: [
+      { text: "Punch Newspaper", href: "https://punchng.com/ngo-calls-for-stronger-support-inclusion-for-neurodivergent-children/" },
+      { text: "The Nigerian Tribune", href: "https://tribuneonlineng.com/stakeholders-advocate-inclusive-education-for-children-with-special-needs/" },
       { text: "Arise News" },
-      { lead: "TVC News:", text: "TVC news", href: "https://www.youtube.com/watch?v=mODkcnYVCpo" },
+      { text: "TVC News", href: "https://www.youtube.com/watch?v=mODkcnYVCpo" },
     ] },
-    { heading: "Issues encountered", ordered: true, items: [{ text: "Delay in securing a suitable location before the event" }, { text: "Access coordination for media houses at the venue" }] },
-    { heading: "Conclusion", paragraphs: [
-      "The awareness walk was successfully conducted with a higher turnout than initially projected, demonstrating strong community interest in neurodiversity and disability inclusion. Through direct engagement with residents, stakeholders, and members of the public, key messages were effectively communicated, leading to increased awareness and understanding of the issues discussed.",
-      "The event also generated significant interest within the community, with several participants expressing willingness to volunteer and support future initiatives after the walk. This reflects the effectiveness of the campaign in mobilising community participation and strengthening local ownership of disability inclusion efforts.",
-      "Overall, the activity successfully achieved its objectives and reinforced the importance of continued advocacy, volunteer engagement, and collaboration with relevant stakeholders to sustain momentum and drive long-term impact.",
+    { heading: "Outcome and next steps", paragraphs: [
+      "The Abuja and Lagos walks advanced the visibility of disability inclusion and neurodiversity, promoted early support and encouraged public engagement. Attendance and expressions of volunteer interest indicate an opportunity to sustain this engagement beyond the events.",
+      "DOE will continue working with communities, volunteers and relevant stakeholders to strengthen public understanding and support more inclusive practices. Future activities will build on this engagement through continued advocacy, collaboration and community participation.",
     ] },
   ],
 };
 
 const livingItReport: EventReport = {
-  title: "Report on Living It: A conversation on Inclusion, Accessibility, Stigma and the Search for Support",
-  details: [["Date", "20th June 2026"], ["Format", "Virtual Webinar"], ["Time", "3 pm to 5 pm WAT"], ["Prepared By", "Bethel Amurawaiye"]],
+  title: "A Report On Living It: A Conversation On Inclusion, Accessibility, Stigma And The Search For Support.",
+  details: [["Date", "20th June 2026"], ["Format", "Virtual Webinar"], ["Time", "3 pm - 5 pm WAT"], ["Prepared By", "Bethel Amurawaiye"]],
   sections: [
-    { heading: "Objectives", ordered: true, items: [
-      { text: "Explore barriers to inclusion, accessibility, and support across Nigeria and Africa." },
+    { heading: "Executive summary", paragraphs: [
+      "On 20 June 2026, Daughter of Ellen Support and Empowerment Initiative (DOE) hosted Living It, a virtual webinar bringing together neurodivergent people, persons with disabilities, parents, caregivers, advocates and professionals to discuss inclusion, accessibility, stigma and access to support.",
+      "The conversation explored barriers across education, healthcare, employment and community life. Speakers highlighted the gap between disability rights and their implementation, the effects of stigma and cultural perceptions, and the need to embed accessibility and reasonable accommodation into policies, programmes and institutions.",
+      "The webinar placed lived experience at the centre of the discussion and identified advocacy, inclusive design and cross-sector collaboration as priorities for translating awareness and policy commitments into practical change.",
+    ] },
+    { heading: "Objectives", paragraphs: ["The webinar aimed to:"], items: [
+      { text: "Explore barriers to inclusion, accessibility and support across Nigeria and Africa." },
       { text: "Highlight evidence-informed approaches to advocacy and systems change." },
-      { text: "Foster collaboration among professionals, advocates, caregivers, and community members." },
+      { text: "Foster collaboration among professionals, advocates, caregivers and community members." },
     ] },
-    { heading: "Summary", paragraphs: [
-      "The webinar was a structured listening session that brought together neurodivergent individuals, persons with disabilities, parents, caregivers, and allies to share lived experiences, identify gaps in support, and highlight community priorities.",
-      "The discussions underscored why these conversations remain more important than ever. An estimated 35 million Nigerians live with a disability, yet significant barriers to inclusion persist. More than 85% of schools in Nigeria are not accessible to students with disabilities, and approximately 70% of children with disabilities remain out of school. These figures reflect deep systemic inequities that continue to limit access to education, healthcare, employment, and community participation.",
-      "Beyond these structural challenges, cultural perceptions further compound exclusion. Across Nigeria and much of Africa, neurodivergence is often interpreted through spiritual or moral lenses, contributing to stigma, delayed diagnosis, and limited access to appropriate support and interventions.",
-      "The session explored these interconnected issues by creating space for neurodivergent individuals, advocates, caregivers and persons with disabilities to share their experiences directly. Discussions focused on four key themes: inclusion in every space, systems that exclude, social stigma and family dynamics, and access to support and resources. Together, these conversations provided valuable insights into the barriers communities face while identifying opportunities for more inclusive policies, practices, and advocacy.",
+    { heading: "About the conversation", paragraphs: [
+      "Living It was structured as a listening and dialogue session. Participants shared experiences, identified gaps in support and raised priorities for more inclusive systems and services.",
+      "The discussion examined four interconnected themes: inclusion in everyday spaces, systems that exclude, stigma and family dynamics, and access to support and resources. Speakers connected these experiences to the design and implementation of policies, services and institutions.",
     ] },
-    { heading: "Key Highlights from the Speakers", paragraphs: [
-      "Eyvonne Anthony opened the webinar by setting the context for the discussion, emphasizing Daughter of Ellen Initiative's commitment to creating platforms that amplify lived experiences, challenge stigma, and promote more inclusive systems for neurodivergent individuals and persons with disabilities.",
-      "Dr. Davis spoke about navigating multiple identities and shared her work on 3e (thrice-exceptional) learners. These are individuals who are both gifted and have multiple disabilities or exceptionalities, yet they often do not have access to appropriately accelerated or enriched instruction. She highlighted how systemic biases prevent many 3e learners from receiving the services and support they need unless someone actively advocates for them, reinforcing the critical role of advocacy in ensuring equitable access to education and support.",
-      "Dr. Davis also emphasized that advocacy is a skill that must be intentionally taught. She explained that many caregivers and educators lack both the understanding of neurodiversity and the language needed to effectively communicate their children's or learners' needs. Without this knowledge, families and professionals may struggle to access appropriate assessments, accommodations, and support services. Empowering caregivers and educators with the tools to advocate, which is essential to ensuring that 3e learners receive the opportunities and resources they deserve.",
-      "Alia spoke about the design gap and how it affects people across every stage of life, from education to community participation and the workplace. She highlighted how many of our existing systems reward visibility over insight, presentation over substance, and conformity over meaningful contribution. Her session challenged participants to rethink how systems are designed and to recognize the barriers they create for neurodivergent individuals, emphasizing the need for more inclusive approaches that value different ways of thinking and contributing.",
-      "Boluwatife Joshua emphasized the need to end stigma, noting that it is a key driver of exclusion for autistic individuals and persons with disabilities. He stressed the importance of developing a deeper understanding of autism to better support and manage individuals on the autism spectrum. By promoting awareness, acceptance, and informed approaches, he highlighted that caregivers, educators, and communities can create more inclusive environments where autistic individuals are empowered to thrive.",
-      "Dr. Emile Gouws drew on his lived experience as an autistic person who did not begin speaking until the age of 15 to underscore the transformative impact of early intervention, support, and inclusive environments for persons with disabilities. He reflected on the progress made in disability rights across Africa while highlighting the persistent gap between policy and practice.",
-      "Dr. Gouws argued that Africa's greatest challenge is not the absence of policies or legislation, but the implementation of them. Despite the existence of disability rights frameworks, many individuals and families continue to face significant barriers in accessing the support and services they need. As he noted, the question is no longer \"Do we have disability rights?\" but rather, \"Why are people still unable to experience those rights?\"",
-      "He challenged advocates and policymakers to move beyond celebrating the passage of legislation and instead focus on measuring tangible outcomes. Lasting change, he emphasized, will only be achieved when disability rights are reflected in people's everyday experiences through accessible services, inclusive systems, and meaningful opportunities for participation.",
-      "Susan O. Michael emphasized that inclusion is fundamentally a governance issue rather than simply a matter of goodwill. She argued that accessibility and reasonable accommodations should be embedded into the design of policies, programmes, and institutions from the outset, rather than being treated as an afterthought. By adopting a systems design approach, organizations and governments can create environments that are inherently inclusive, ensuring that persons with disabilities and neurodivergent individuals are considered in planning, decision-making, and service delivery from the very beginning.",
+    { heading: "Context and available statistics", paragraphs: [
+      "Nigeria’s disability population remains difficult to establish precisely. The National Population Commission has reported that the widely cited estimate of 35.5 million people with disabilities is based on unreliable figures and has called for better national data. A 2025 estimate of approximately 35 million has since been published, but it should be treated as an estimate rather than a definitive count.",
+      "The webinar’s source material cited estimates that more than 85% of schools are inaccessible to students with disabilities and that approximately 70% of children with disabilities are out of school. These figures also appear in a 2024 disability inclusion report, while the 85% school-accessibility estimate has been attributed to the National Commission for Persons with Disabilities. They are useful indicators of reported barriers, but the available sources do not establish them as current national measurements.",
+      "Participants also discussed how spiritual or moral interpretations of neurodivergence and disability can contribute to stigma, delayed identification and limited access to appropriate support. The conversation emphasised respectful, informed approaches that centre the experiences and agency of people directly affected.",
     ] },
-    { heading: "Participant Engagement", paragraphs: [
-      "Participants actively engaged through questions, reflections, and shared lived experiences. The discussions demonstrated a strong interest in practical solutions and a desire for continued opportunities to connect with professionals and drive meaningful change.",
+    { heading: "Speakers", items: [
+      { text: "Eyvonne Eleko, Founder, Daughter of Ellen Support and Empowerment Initiative" },
+      { text: "Dr. Joy Lawson Davis, Equity Activist" },
+      { text: "Dr. Emile Gouws, Disability Advocate and Researcher" },
+      { text: "Alia Booley, Country Lead, Institute of Neurodiversity, South Africa" },
+      { text: "Ayanwole Boluwatife, Behaviour Interventionist" },
+      { text: "Susan O. Michael, Social Inclusion Specialist" },
     ] },
-    { heading: "Key Outcomes", items: [
-      { text: "Participants gained a deeper understanding of systemic barriers affecting neurodivergent individuals and persons with disabilities." },
-      { text: "Advocacy emerged as a recurring theme, particularly the need to equip caregivers and educators with the language and knowledge to access appropriate support." },
-      { text: "Discussions highlighted the importance of designing inclusive educational, workplace, and community systems." },
-      { text: "Participants expressed interest in continued conversations and cross-sector collaboration." },
+    { heading: "Key contributions", paragraphs: [] },
+    { heading: "Lived experience and the purpose of the conversation", paragraphs: [
+      "Eyvonne Eleko opened the webinar by outlining DOE’s commitment to creating platforms that amplify lived experiences, challenge stigma and promote more inclusive systems for neurodivergent people and persons with disabilities.",
     ] },
-    { heading: "Conclusion/Next Steps", paragraphs: [
-      "The webinar successfully achieved its objective of creating a platform for meaningful dialogue on inclusion, accessibility, stigma, and support for neurodivergent individuals and persons with disabilities. The discussions reinforced that while awareness is growing, significant structural, cultural, and systemic barriers remain.",
-      "Across all presentations, advocacy, inclusive design, and collaboration emerged as central themes. Speakers emphasized that lasting change requires not only policy reform but also equipping caregivers, educators, employers, and communities with the knowledge and tools to create genuinely inclusive environments.",
-      "The webinar served as a powerful reminder that these conversations are more important now than ever, shining a light on communities that have long been marginalized and excluded from mainstream systems and decision-making.",
-      "Bringing together professionals from diverse disciplines reinforced the value of interdisciplinary collaboration and highlighted the need for continued roundtable discussions, cross-sector partnerships, and sustained advocacy. The webinar reaffirmed that meaningful inclusion requires more than awareness, it demands intentional action, collaborative leadership, and systems designed with accessibility at their core. Building on the momentum of this conversation, Daughter of Ellen Initiative remains committed to advancing dialogue, strengthening partnerships, and translating lived experiences into lasting, measurable impact.",
+    { heading: "Advocacy and support for twice-exceptional learners", paragraphs: [
+      "Dr. Joy Lawson Davis discussed multiple identities and her work with twice-exceptional, or 2e, learners: individuals who are gifted and also have one or more disabilities or exceptionalities. She highlighted how bias and gaps in understanding can prevent these learners from receiving appropriate enrichment, services and support.",
+      "Dr. Davis also stressed that advocacy is a skill that can be developed. Caregivers and educators may need stronger knowledge and language to communicate support needs and navigate assessment, accommodation and service systems.",
+    ] },
+    { heading: "Designing systems for different ways of contributing", paragraphs: [
+      "Alia Booley examined the design gap across education, workplaces and community life. She challenged systems that prioritise conformity and visible performance over insight and meaningful contribution, and called for approaches that recognise and accommodate different ways of thinking and participating.",
+    ] },
+    { heading: "Challenging stigma and supporting autistic people", paragraphs: [
+      "Ayanwole Boluwatife addressed the role of stigma in the exclusion of autistic people and persons with disabilities. He emphasised the value of informed understanding and supportive environments in helping autistic people participate and thrive.",
+    ] },
+    { heading: "Moving from disability rights to implementation", paragraphs: [
+      "Drawing on lived experience and disability advocacy, Dr. Emile Gouws reflected on progress in disability rights across Africa and the continuing gap between policy and practice. He called for attention to the outcomes people experience in everyday life, including access to services, accessible environments and meaningful participation.",
+    ] },
+    { heading: "Embedding accessibility in governance and design", paragraphs: [
+      "Susan O. Michael framed inclusion as a governance responsibility. She argued that accessibility and reasonable accommodation should be considered during the design of policies, programmes and institutions, rather than added later. This approach can help ensure that persons with disabilities and neurodivergent people are considered in planning and service delivery.",
+    ] },
+    { heading: "Participant engagement", paragraphs: [
+      "Participants contributed questions, reflections and lived experiences throughout the session. Their engagement reflected interest in practical responses to exclusion and in continued opportunities for dialogue, learning and collaboration.",
+    ] },
+    { heading: "Key outcomes", paragraphs: ["The webinar:"], items: [
+      { text: "Created a platform for direct discussion of barriers affecting neurodivergent people and persons with disabilities." },
+      { text: "Highlighted advocacy as an important tool for navigating education and support systems." },
+      { text: "Drew attention to the need for inclusive design across education, workplaces and community services." },
+      { text: "Examined the gap between disability rights commitments and people’s everyday access to those rights." },
+      { text: "Identified continued dialogue and cross-sector collaboration as priorities for further work." },
+    ] },
+    { heading: "Conclusion and next steps", paragraphs: [
+      "Living It brought together people with diverse experiences and expertise to examine inclusion, accessibility, stigma and access to support. The discussion reinforced that awareness alone cannot address the structural and cultural barriers participants described.",
+      "Speakers emphasised the importance of equipping caregivers and educators to advocate effectively, embedding accessibility in policy and programme design, and measuring whether rights and commitments translate into meaningful participation in daily life.",
+      "The webinar strengthened the case for continued dialogue, cross-sector collaboration and sustained advocacy. DOE remains committed to bringing lived experience into these conversations and supporting efforts to translate community priorities into more inclusive practice.",
     ] },
   ],
 };
@@ -148,24 +200,24 @@ export const events: DoeEvent[] = [
   { slug: "ai-for-accessibility", label: "Workshop", startsAt: "2026-08-07T18:00:00+01:00", endsAt: "2026-08-07T20:00:00+01:00",
     title: "AI for Accessibility: Building Inclusive Solutions for the Future", theme: "AI for Accessibility", date: "Friday, August 7, 2026", time: "6:00 PM to 8:00 PM GMT+1", venue: "Zoom",
     description: "A hands-on intermediate workshop for students and professionals exploring how AI can improve accessibility, productivity, and innovation.", cta: "Register", link: "https://luma.com/33g5cl44",
-    reportUrl: "https://docs.google.com/document/d/1qySPrhUD0s5TkoRb4mCRpvjIaYFO0TopZ51UrtktSiw/view", report: aiReport,
+    reportUrl: "https://docs.google.com/document/d/1r3vaDD_ant44ruOktEgN9B1SXswpoRTjgrMhxb6klCE/view", report: aiReport,
     recap: aiReport.sections[0].paragraphs![0],
-    speakers: [{ name: "Eyvonne Anthony", title: "Founder, Daughter of Ellen Initiative" }, { name: "Lola Adey", title: "Founder, Vibe Code Africa" }], gallery: [] },
+    speakers: [{ name: "Eyvonne Eleko", title: "Founder, Daughter of Ellen Support and Empowerment Initiative" }, { name: "Lola Adey", title: "Founder, Nard AI and Vibe Code Africa" }], gallery: [] },
   { slug: "living-it-webinar", label: "Inaugural Webinar", startsAt: "2026-06-20T15:00:00+01:00", endsAt: "2026-06-21T00:00:00+01:00",
     title: "Living It: Inclusion, Accessibility, Stigma and the Search for Support", theme: "Inclusion, Accessibility, Stigma and the Search for Support", date: "June 20th, 2026", time: "3:00 PM WAT", venue: "Online Webinar",
     description: "An inaugural Daughter of Ellen webinar convening voices from across Africa and the diaspora to examine the everyday realities of neurodivergent individuals and persons with disabilities, and to chart a clear path toward the support systems our communities deserve.",
     cta: "Register for the Webinar", link: "https://event.getbookt.io/living-it-inclusion-accessibility-stigma-and-the-search-for-support",
-    reportUrl: "https://docs.google.com/document/d/1tmIkGpqm1cQDVXRfuU-3ORlxD5m7s52A7eZaFuVg6wc/view", report: livingItReport,
-    recap: livingItReport.sections[1].paragraphs![0],
+    reportUrl: "https://docs.google.com/document/d/16fR7axd4TIDoYJxMKcyX1c4tDt4OTZh1c99HCKv3-qI/view", report: livingItReport,
+    recap: livingItReport.sections[0].paragraphs![0],
     speakers: [
-      { name: "Eyvonne Anthony", title: "Founder, Daughter of Ellen Initiative" }, { name: "Dr Joy Lawson Davis", title: "Award-winning Equity Activist" },
+      { name: "Eyvonne Eleko", title: "Founder, Daughter of Ellen Support and Empowerment Initiative" }, { name: "Dr Joy Lawson Davis", title: "Award-winning Equity Activist" },
       { name: "Dr Emile Gouws", title: "International Disability Advocate & Researcher" }, { name: "Alia Booley", title: "Country Lead for the Institute of Neurodiversity, South Africa" },
       { name: "Ayanwole Boluwatife", title: "Behaviour Interventionist" }, { name: "Susan O Michael", title: "Social Inclusion Specialist" },
     ], gallery: [] },
   { slug: "lagos-awareness-walk", label: "Awareness Walk", startsAt: "2026-06-06T09:00:00+01:00", endsAt: "2026-06-06T12:00:00+01:00",
     title: "Lagos Awareness Walk", theme: "Walk for Neurodiversity & Disability Inclusion", date: "6th June 2026", time: "9 am to 12 noon", venue: "Johnson Jakande Tinubu Park (JJT) to City View Hotel (Taiwo Close), Ikeja, and back to JJT",
     description: lagosWalkReport.sections[0].paragraphs![0], cta: "View the Report", link: reportPath("lagos-awareness-walk"),
-    reportUrl: "https://docs.google.com/document/d/1OMVbee62M1V48cR6BWKVvJiJ1G67A6-nv42OesLXVdg/view", report: lagosWalkReport, recap: lagosWalkReport.sections[0].paragraphs![1],
+    reportUrl: "https://docs.google.com/document/d/1VkEi1Pv3K3QZ8ivuvp3a-phigKaQSj1xjRz6uegTr-4/view", report: lagosWalkReport, recap: lagosWalkReport.sections[0].paragraphs![1],
     speakers: [], gallery: [lc1, lc2, lc3, lc4, lc5, lc6, lc7, lc8, lc9, lc10] },
 ];
 
